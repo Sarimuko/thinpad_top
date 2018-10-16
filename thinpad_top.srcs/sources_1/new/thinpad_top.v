@@ -83,8 +83,15 @@ module thinpad_top(
 
 /* =========== Demo code begin =========== */
 
+state_machine(
+    dip_sw[15: 0],//输入操作数和操作码所用
+    clock_btn,//确认键
+    reset_btn,//复位键
+
+    leds);//结果输出
+
 // PLL分频示例
-wire locked, clk_10M, clk_20M;
+/*wire locked, clk_10M, clk_20M;
 pll_example clock_gen 
  (
   // Clock out ports
@@ -197,7 +204,7 @@ vga #(12, 800, 856, 976, 1040, 600, 637, 643, 666, 1, 1) vga800x600at75 (
     .hsync(video_hsync),
     .vsync(video_vsync),
     .data_enable(video_de)
-);
+);*/
 /* =========== Demo code end =========== */
 
 endmodule
