@@ -83,7 +83,7 @@ module thinpad_top(
 
 /* =========== Demo code begin =========== */
 
-state_machine(
+state_machine ALU_top(
     dip_sw[15: 0],//输入操作数和操作码所用
     clock_btn,//确认键
     reset_btn,//复位键

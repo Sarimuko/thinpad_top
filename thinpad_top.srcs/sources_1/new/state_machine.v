@@ -22,7 +22,7 @@ reg[2: 0] state, next_state;
 
 
 //TODO: 实例化一个ALU，input A, B, opt, output ans
-alu_instance: alu(A, B, opt, ans);
+alu alu_instance(A, B, opt, ans);
 
 always @(state) begin
 	next_state = ORIGIN;
