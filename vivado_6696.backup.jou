@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Oct 16 09:03:38 2018
+# Process ID: 6696
+# Current directory: C:/Users/acer/Desktop/thinpad_top
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8944 C:\Users\acer\Desktop\thinpad_top\thinpad_top.xpr
+# Log file: C:/Users/acer/Desktop/thinpad_top/vivado.log
+# Journal file: C:/Users/acer/Desktop/thinpad_top\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/acer/Desktop/thinpad_top/thinpad_top.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run impl_1
+set_property STEPS.WRITE_BITSTREAM.TCL.PRE C:/Users/acer/Desktop/thinpad_top/build.tcl [get_runs impl_1]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+set_property STEPS.WRITE_BITSTREAM.TCL.PRE {} [get_runs impl_1]
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property top thinpad_top [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
