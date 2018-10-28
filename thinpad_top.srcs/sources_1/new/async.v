@@ -11,23 +11,24 @@
 
 ////////////////////////////////////////////////////////
 `default_nettype wire
-module async_transmitter(
+module async_transmitter( // 发送模块
 	input clk,
-	input TxD_start,
-	input [7:0] TxD_data,
-	output TxD,
-	output TxD_busy
+	input TxD_start, //开始发送信号
+	input [7:0] TxD_data, //待发送的数据
+	output TxD,  //串行信号输出
+	output TxD_busy //发送器忙状态指示
 );
 
 // Assert TxD_start for (at least) one clock cycle to start transmission of TxD_data
 // TxD_data is latched so that it doesn't have to stay valid while it is being sent
 
-parameter ClkFrequency = 25000000;	// 25MHz
-parameter Baud = 115200;
+parameter ClkFrequency = 25000000;	// 25MHz, 参数是可以在实例化的时候指定的
+parameter Baud = 115200; // 波特率
 
 generate
 	if(ClkFrequency<Baud*8 && (ClkFrequency % Baud!=0)) ASSERTION_ERROR PARAMETER_OUT_OF_RANGE("Frequency incompatible with requested Baud rate");
 endgenerate
+//报错？？
 
 ////////////////////////////////
 `ifdef SIMULATION
@@ -38,7 +39,7 @@ BaudTickGen #(ClkFrequency, Baud) tickgen(.clk(clk), .enable(TxD_busy), .tick(Bi
 `endif
 
 reg [3:0] TxD_state = 0;
-wire TxD_ready = (TxD_state==0);
+wire TxD_ready = (TxD_state==0); // 是一个状态机
 assign TxD_busy = ~TxD_ready;
 
 reg [7:0] TxD_shift = 0;
@@ -68,6 +69,7 @@ begin
 end
 
 assign TxD = (TxD_state<4) | (TxD_state[3] & TxD_shift[0]);  // put together the start, data and stop bits
+//发送的串行信号从1开始，紧接着是数据，然后以1结束
 endmodule
 
 
