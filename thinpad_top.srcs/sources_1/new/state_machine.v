@@ -35,12 +35,21 @@ reg rdn_r = 1, wrn_r = 1;
 assign uart_rdn = rdn_r;
 assign uart_wrn = wrn_r;//串口读写使能
 
+reg [31:0] data_w; //写数据缓存
+reg [31:0] data_r; //读数据缓存
+
 wire [7:0] ext_uart_rx; // 接收到的并行数据
 reg  [7:0] ext_uart_buffer, ext_uart_tx; // 接收到的数据的缓冲区，待发送的数据缓冲区
 wire ext_uart_ready, ext_uart_busy; // 是否已经接收到一帧完整的数据，是否正在发送器忙
 reg ext_uart_start, ext_uart_avai; // 是否开始发送缓冲区中的信号，是否数据已经可用
 
-assign data = data_received;
+assign  data = (we_r == 0 || wrn_r == 0)? data_w: 32'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
+
+always @(oe_r, rdn_r)
+if(oe_r == 0 || rdn_r == 0)
+data_r = data;// 读数据缓存
+
+
 
 always @(posedge clk or posedge rst) begin
 	if (rst) begin
@@ -53,6 +62,7 @@ always @(posedge clk or posedge rst) begin
 			 if (received_done) begin
 			// data <= data_received;
 			leds <= data_received[15:0];
+			data_w <= data_received;
 			state <= 4'b0001;	
 			end
 			else begin
@@ -85,7 +95,7 @@ always @(posedge clk or posedge rst) begin
 			state <= 4'b0101;
 			end
 			4'b0101: begin
-			data_received <= data;//将读到的数据放到缓冲区
+			data_received <= data_r;//将读到的数据放到缓冲区
 			send_begin <= 1; //开始发送缓存区中的数据
 			leds <= data[15:0];
 			oe_r <= 1;
@@ -106,10 +116,10 @@ always @(posedge clk_50M) begin
 	 // 如果接收到一帧数据，把它依次放在缓冲区里
 		case (rec_state)
 			4'b0000: if (uart_dataready) begin rdn_r <= 0; wrn_r <= 1; rec_state <= 4'b0001; end
-			4'b0001: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[31:24] <= data[7:0]; rec_state <= 4'b0010; end
-			4'b0010: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[23:16] <= data[7:0]; rec_state <= 4'b0011; end
-			4'b0011: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[15:8] <= data[7:0]; rec_state <= 4'b0100; end
-			4'b0100: begin data_received[7:0] <= data[7:0]; received_done <= 1; rec_state <= 4'b0000; end
+			4'b0001: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[31:24] <= data_r[7:0]; rec_state <= 4'b0010; end
+			4'b0010: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[23:16] <= data_r[7:0]; rec_state <= 4'b0011; end
+			4'b0011: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[15:8] <= data_r[7:0]; rec_state <= 4'b0100; end
+			4'b0100: begin data_received[7:0] <= data_r[7:0]; received_done <= 1; rec_state <= 4'b0000; end
 			default: rec_state <= 0;
 		endcase
 
@@ -128,7 +138,7 @@ reg tra_state = 0;
 always @(posedge clk_50M) begin
 		case(tra_state)
 			4'b0000: if (send_begin && !uart_tbre) begin // 如果不忙并且有开始发送信号
-				data[7:0] <= data_received[31:24];
+				data_w[7:0] <= data_received[31:24];
 				rdn_r <= 1; wrn_r <= 0; 
 				send_begin <= 0;//将开始发送信号置为零
 				tra_state <= 1;
@@ -137,19 +147,19 @@ always @(posedge clk_50M) begin
 				tra_state <= 0;
 			end
 			4'b0001: if (!uart_tbre && uart_tsre) begin
-				data[7:0] <= data_received[23:16];
+				data_w[7:0] <= data_received[23:16];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 2;
 			end
 			4'b0010:
 			if (!uart_tbre && uart_tsre) begin
-				data[7:0] <= data_received[15:8];
+				data_w[7:0] <= data_received[15:8];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 3;
 			end
 			4'b0011:
 			if (!uart_tbre && uart_tsre)begin
-				data[7:0] <= data_received[7:0];
+				data_w[7:0] <= data_received[7:0];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 0;
 			end

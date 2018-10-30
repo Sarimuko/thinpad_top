@@ -157,7 +157,7 @@ state_machine test(
     .we(base_ram_we_n),
 
     .rxd(rxd),
-    .txd(txd)，
+    .txd(txd),
 
     .uart_rdn(uart_rdn),         //读串口信号，低有效
     .uart_wrn(uart_wrn),         //写串口信号，低有效
