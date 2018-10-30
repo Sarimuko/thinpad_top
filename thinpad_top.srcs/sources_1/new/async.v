@@ -11,24 +11,24 @@
 
 ////////////////////////////////////////////////////////
 `default_nettype wire
-module async_transmitter( // å‘é€æ¨¡å—
+module async_transmitter( // ·¢ËÍÄ£¿é
 	input clk,
-	input TxD_start, //å¼€å§‹å‘é€ä¿¡å·
-	input [7:0] TxD_data, //å¾…å‘é€çš„æ•°æ®
-	output TxD,  //ä¸²è¡Œä¿¡å·è¾“å‡º
-	output TxD_busy //å‘é€å™¨å¿™çŠ¶æ€æŒ‡ç¤º
+	input TxD_start, //¿ªÊ¼·¢ËÍĞÅºÅ
+	input [7:0] TxD_data, //´ı·¢ËÍµÄÊı¾İ
+	output TxD,  //´®ĞĞĞÅºÅÊä³ö
+	output TxD_busy //·¢ËÍÆ÷Ã¦×´Ì¬Ö¸Ê¾
 );
 
 // Assert TxD_start for (at least) one clock cycle to start transmission of TxD_data
 // TxD_data is latched so that it doesn't have to stay valid while it is being sent
 
-parameter ClkFrequency = 25000000;	// 25MHz, å‚æ•°æ˜¯å¯ä»¥åœ¨å®ä¾‹åŒ–çš„æ—¶å€™æŒ‡å®šçš„
-parameter Baud = 115200; // æ³¢ç‰¹ç‡
+parameter ClkFrequency = 25000000;	// 25MHz, ²ÎÊıÊÇ¿ÉÒÔÔÚÊµÀı»¯µÄÊ±ºòÖ¸¶¨µÄ
+parameter Baud = 115200; // ²¨ÌØÂÊ
 
 generate
 	if(ClkFrequency<Baud*8 && (ClkFrequency % Baud!=0)) ASSERTION_ERROR PARAMETER_OUT_OF_RANGE("Frequency incompatible with requested Baud rate");
 endgenerate
-//æŠ¥é”™ï¼Ÿï¼Ÿ
+//±¨´í£¿£¿
 
 ////////////////////////////////
 `ifdef SIMULATION
@@ -39,7 +39,7 @@ BaudTickGen #(ClkFrequency, Baud) tickgen(.clk(clk), .enable(TxD_busy), .tick(Bi
 `endif
 
 reg [3:0] TxD_state = 0;
-wire TxD_ready = (TxD_state==0); // æ˜¯ä¸€ä¸ªçŠ¶æ€æœº
+wire TxD_ready = (TxD_state==0); // ÊÇÒ»¸ö×´Ì¬»ú
 assign TxD_busy = ~TxD_ready;
 
 reg [7:0] TxD_shift = 0;
@@ -69,7 +69,7 @@ begin
 end
 
 assign TxD = (TxD_state<4) | (TxD_state[3] & TxD_shift[0]);  // put together the start, data and stop bits
-//å‘é€çš„ä¸²è¡Œä¿¡å·ä»1å¼€å§‹ï¼Œç´§æ¥ç€æ˜¯æ•°æ®ï¼Œç„¶åä»¥1ç»“æŸ
+//·¢ËÍµÄ´®ĞĞĞÅºÅ´Ó1¿ªÊ¼£¬½ô½Ó×ÅÊÇÊı¾İ£¬È»ºóÒÔ1½áÊø
 endmodule
 
 

@@ -4,31 +4,33 @@ module state_machine(
 	input clk,
 	input rst,
 
-	output [15:0] leds,
+	output reg[15:0] leds,
 	inout [31:0] data,
-	output [19:0] address,
+	output reg[19:0] address,
 	input [31:0] push_buttons,
 
-	output oe, 
-	output we,
+	output reg oe, 
+	output reg we,
 
 	input rxd,
 	output txd
 	);
 
-reg [3:0] state = 0;//çŠ¶æ€æœºæ€»çŠ¶æ€
-reg [31:0] data_received;// æ¥å—åˆ°çš„æ‰€æœ‰æ•°æ®
-reg [19:0] address_buffer;// å­˜å‚¨çš„åœ°å€
-reg received_done = 0; // æ˜¯å¦32ä½æ•°æ®å·²ç»æ¥å—å®Œæ¯•
-reg send_begin = 0;// æ˜¯å¦å¼€å§‹å‘é€æ•°æ®
+reg [3:0] state = 0;//×´Ì¬»ú×Ü×´Ì¬
+reg [31:0] data_received;// ½ÓÊÜµ½µÄËùÓĞÊı¾İ
+reg [19:0] address_buffer;// ´æ´¢µÄµØÖ·
+reg received_done = 0; // ÊÇ·ñ32Î»Êı¾İÒÑ¾­½ÓÊÜÍê±Ï
+reg send_begin = 0;// ÊÇ·ñ¿ªÊ¼·¢ËÍÊı¾İ
 
 reg oe_r = 1;
-reg we_r = 1;// é»˜è®¤ä¸ä½¿èƒ½
+reg we_r = 1;// Ä¬ÈÏ²»Ê¹ÄÜ
 
-wire [7:0] ext_uart_rx; // æ¥æ”¶åˆ°çš„å¹¶è¡Œæ•°æ®
-reg  [7:0] ext_uart_buffer, ext_uart_tx; // æ¥æ”¶åˆ°çš„æ•°æ®çš„ç¼“å†²åŒºï¼Œå¾…å‘é€çš„æ•°æ®ç¼“å†²åŒº
-wire ext_uart_ready, ext_uart_busy; // æ˜¯å¦å·²ç»æ¥æ”¶åˆ°ä¸€å¸§å®Œæ•´çš„æ•°æ®ï¼Œæ˜¯å¦æ­£åœ¨å‘é€å™¨å¿™
-reg ext_uart_start, ext_uart_avai; // æ˜¯å¦å¼€å§‹å‘é€ç¼“å†²åŒºä¸­çš„ä¿¡å·ï¼Œæ˜¯å¦æ•°æ®å·²ç»å¯ç”¨
+wire [7:0] ext_uart_rx; // ½ÓÊÕµ½µÄ²¢ĞĞÊı¾İ
+reg  [7:0] ext_uart_buffer, ext_uart_tx; // ½ÓÊÕµ½µÄÊı¾İµÄ»º³åÇø£¬´ı·¢ËÍµÄÊı¾İ»º³åÇø
+wire ext_uart_ready, ext_uart_busy; // ÊÇ·ñÒÑ¾­½ÓÊÕµ½Ò»Ö¡ÍêÕûµÄÊı¾İ£¬ÊÇ·ñÕıÔÚ·¢ËÍÆ÷Ã¦
+reg ext_uart_start, ext_uart_avai; // ÊÇ·ñ¿ªÊ¼·¢ËÍ»º³åÇøÖĞµÄĞÅºÅ£¬ÊÇ·ñÊı¾İÒÑ¾­¿ÉÓÃ
+
+assign data = data_received;
 
 always @(posedge clk or posedge rst) begin
 	if (rst) begin
@@ -37,64 +39,72 @@ always @(posedge clk or posedge rst) begin
 	end
 	else if (clk) begin
 		case(state)
-			4'b0000: if (received_done) begin
-			data <= data_received;
+			4'b0000:begin
+			 if (received_done) begin
+			// data <= data_received;
 			leds <= data_received[15:0];
 			state <= 4'b0001;	
 			end
 			else begin
+			    leds <= data_received[15:0];
 				state <= 0;
 			end
-			4'b0001: 
+			end
+			4'b0001: begin
 			address <= push_buttons;
 			state <= 4'b0010;
-			4'b0010:
-			we <= 0;//å†™æ•°æ®
+			end
+			4'b0010: begin
+			we <= 0;//Ğ´Êı¾İ
 			state <= 4'b0011;
-			4'b0011:
+			end
+			4'b0011: begin
 			we <= 1;
 			address <= push_buttons;
 			state <= 4'b0100;
-			4'b0100:
+			end
+			4'b0100: begin
 			oe <= 0;
 			state <= 4'b0101;
-			4'b0101:
-			data_received <= data;//å°†è¯»åˆ°çš„æ•°æ®æ”¾åˆ°ç¼“å†²åŒº
+			end
+			4'b0101: begin
+			data_received <= data;//½«¶Áµ½µÄÊı¾İ·Åµ½»º³åÇø
 			leds <= data[15:0];
 			oe <= 1;
 			state <= 0;
+			end
 			default: state <= 0;
 		endcase
 	end
 end
 
-//ç›´è¿ä¸²å£æ¥æ”¶å‘é€æ¼”ç¤ºï¼Œä»ç›´è¿ä¸²å£æ”¶åˆ°çš„æ•°æ®å†å‘é€å‡ºå»
+//Ö±Á¬´®¿Ú½ÓÊÕ·¢ËÍÑİÊ¾£¬´ÓÖ±Á¬´®¿ÚÊÕµ½µÄÊı¾İÔÙ·¢ËÍ³öÈ¥
 
-async_receiver #(.ClkFrequency(50000000),.Baud(9600)) //æ¥æ”¶æ¨¡å—ï¼Œ9600æ— æ£€éªŒä½
+async_receiver #(.ClkFrequency(50000000),.Baud(9600)) //½ÓÊÕÄ£¿é£¬9600ÎŞ¼ìÑéÎ»
     ext_uart_r(
-        .clk(clk_50M),                       //å¤–éƒ¨æ—¶é’Ÿä¿¡å·
-        .RxD(rxd),                           //å¤–éƒ¨ä¸²è¡Œä¿¡å·è¾“å…¥
-        .RxD_data_ready(ext_uart_ready),  //æ•°æ®æ¥æ”¶åˆ°æ ‡å¿—
-        .RxD_clear(ext_uart_ready),       //æ¸…é™¤æ¥æ”¶æ ‡å¿—
-        .RxD_data(ext_uart_rx)             //æ¥æ”¶åˆ°çš„ä¸€å­—èŠ‚æ•°æ®
+        .clk(clk_50M),                       //Íâ²¿Ê±ÖÓĞÅºÅ
+        .RxD(rxd),                           //Íâ²¿´®ĞĞĞÅºÅÊäÈë
+        .RxD_data_ready(ext_uart_ready),  //Êı¾İ½ÓÊÕµ½±êÖ¾
+        .RxD_clear(ext_uart_ready),       //Çå³ı½ÓÊÕ±êÖ¾
+        .RxD_data(ext_uart_rx)             //½ÓÊÕµ½µÄÒ»×Ö½ÚÊı¾İ
     );
     
-// æ¥å—æ•°æ®çŠ¶æ€æœº
+// ½ÓÊÜÊı¾İ×´Ì¬»ú
 reg [3:0]rec_state = 0;
 always @(posedge clk_50M) begin
-	received_done <= 0;//é»˜è®¤æ˜¯0
-	if(ext_uart_ready)begin // å¦‚æœæ¥æ”¶åˆ°ä¸€å¸§æ•°æ®ï¼ŒæŠŠå®ƒä¾æ¬¡æ”¾åœ¨ç¼“å†²åŒºé‡Œ
+	received_done <= 0;//Ä¬ÈÏÊÇ0
+	if(ext_uart_ready)begin // Èç¹û½ÓÊÕµ½Ò»Ö¡Êı¾İ£¬°ÑËüÒÀ´Î·ÅÔÚ»º³åÇøÀï
 		case (rec_state)
-			4'b0000: data[31:24] <= ext_uart_rx; rec_state <= 4'b0001;
-			4'b0001: data[23:16] <= ext_uart_rx; rec_state <= 4'b0010;
-			4'b0010: data[15:8] <= ext_uart_rx; rec_state <= 4'b0011;
-			4'b0100: data[7:0] <= ext_uart_rx; received_done <= 1; rec_state <= 4'b0000;
+			4'b0000: begin data_received[31:24] <= ext_uart_rx; rec_state <= 4'b0001; end
+			4'b0001: begin data_received[23:16] <= ext_uart_rx; rec_state <= 4'b0010; end
+			4'b0010: begin data_received[15:8] <= ext_uart_rx; rec_state <= 4'b0011; end
+			4'b0100: begin data_received[7:0] <= ext_uart_rx; received_done <= 1; rec_state <= 4'b0000; end
 			default: rec_state <= 0;
 		endcase
 	end
 end
 
-/*always @(posedge clk_50M) begin //æ¥æ”¶åˆ°ç¼“å†²åŒºext_uart_buffer
+/*always @(posedge clk_50M) begin //½ÓÊÕµ½»º³åÇøext_uart_buffer
     if(ext_uart_ready)begin
         ext_uart_buffer <= ext_uart_rx;
         ext_uart_avai <= 1;
@@ -106,10 +116,10 @@ end*/
 reg tra_state = 0;
 always @(posedge clk_50M) begin
 		case(tra_state)
-			4'b0000: if (send_begin && !ext_uart_busy) begin // å¦‚æœä¸å¿™å¹¶ä¸”å¼€å§‹å‘é€
+			4'b0000: if (send_begin && !ext_uart_busy) begin // Èç¹û²»Ã¦²¢ÇÒ¿ªÊ¼·¢ËÍ
 				ext_uart_tx <= data[31:24];
 				ext_uart_start <= 1;
-				send_begin <= 0;//å°†å¼€å§‹å‘é€ä¿¡å·ç½®ä¸ºé›¶
+				send_begin <= 0;//½«¿ªÊ¼·¢ËÍĞÅºÅÖÃÎªÁã
 				tra_state <= 1;
 			end
 			else begin
@@ -145,14 +155,14 @@ always @(posedge clk_50M) begin
 
 		endcase
 	end
-end
 
-async_transmitter #(.ClkFrequency(50000000),.Baud(9600)) //å‘é€æ¨¡å—ï¼Œ9600æ— æ£€éªŒä½
+
+async_transmitter #(.ClkFrequency(50000000),.Baud(9600)) //·¢ËÍÄ£¿é£¬9600ÎŞ¼ìÑéÎ»
     ext_uart_t(
-        .clk(clk_50M),                  //å¤–éƒ¨æ—¶é’Ÿä¿¡å·
-        .TxD(txd),                      //ä¸²è¡Œä¿¡å·è¾“å‡º
-        .TxD_busy(ext_uart_busy),       //å‘é€å™¨å¿™çŠ¶æ€æŒ‡ç¤º
-        .TxD_start(ext_uart_start),    //å¼€å§‹å‘é€ä¿¡å·
-        .TxD_data(ext_uart_tx)        //å¾…å‘é€çš„æ•°æ®
+        .clk(clk_50M),                  //Íâ²¿Ê±ÖÓĞÅºÅ
+        .TxD(txd),                      //´®ĞĞĞÅºÅÊä³ö
+        .TxD_busy(ext_uart_busy),       //·¢ËÍÆ÷Ã¦×´Ì¬Ö¸Ê¾
+        .TxD_start(ext_uart_start),    //¿ªÊ¼·¢ËÍĞÅºÅ
+        .TxD_data(ext_uart_tx)        //´ı·¢ËÍµÄÊı¾İ
     );
 endmodule
