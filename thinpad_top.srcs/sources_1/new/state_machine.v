@@ -13,8 +13,8 @@ module state_machine(
 	output wire we,
 
 	    //CPLD串口控制器信号
-    output reg uart_rdn,         //读串口信号，低有效
-    output reg uart_wrn,         //写串口信号，低有效
+    output uart_rdn,         //读串口信号，低有效
+    output uart_wrn,         //写串口信号，低有效
     input wire uart_dataready,    //串口数据准备好
     input wire uart_tbre,         //发送数据标志
     input wire uart_tsre        //数据发送完毕标志
@@ -65,8 +65,8 @@ always @(posedge clk or posedge rst) begin
 			state <= 4'b0010;
 			end
 			4'b0010: begin
-			uart_rdn <= 1;
-			uart_wrn <= 1;
+			rdn_r <= 1;
+			wrn_r <= 1;
 			we_r <= 0;//写数据
 			oe_r <= 1;
 			state <= 4'b0011;
@@ -78,8 +78,8 @@ always @(posedge clk or posedge rst) begin
 			state <= 4'b0100;
 			end
 			4'b0100: begin
-			uart_rdn <= 1;
-			uart_wrn <= 1;
+			rdn_r <= 1;
+			wrn_r <= 1;
 			oe_r <= 0; // 读数据
 			we_r <= 1;
 			state <= 4'b0101;
