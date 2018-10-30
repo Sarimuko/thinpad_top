@@ -339,3 +339,7 @@ selectCodeEditor("state_machine.v", 825, 309); // ce (w, ck)
 selectCodeEditor("state_machine.v", 481, 388); // ce (w, ck)
 // Elapsed time: 30 seconds
 selectCodeEditor("state_machine.v", 310, 277); // ce (w, ck)
+// Elapsed time: 111 seconds
+selectCodeEditor("state_machine.v", 446, 185); // ce (w, ck)
+// Elapsed time: 54 seconds
+selectCodeEditor("state_machine.v", 119, 371); // ce (w, ck)
