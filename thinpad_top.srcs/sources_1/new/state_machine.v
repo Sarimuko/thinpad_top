@@ -29,11 +29,11 @@ reg send_begin = 0;// 是否开始发送数据
 reg oe_r = 1, we_r = 1;
 
 assign oe = oe_r;
-assign we = we_r;
+assign we = we_r;//内存读写使能
 
 reg rdn_r = 1, wrn_r = 1;
 assign uart_rdn = rdn_r;
-assign uart_wrn = wrn_r;
+assign uart_wrn = wrn_r;//串口读写使能
 
 wire [7:0] ext_uart_rx; // 接收到的并行数据
 reg  [7:0] ext_uart_buffer, ext_uart_tx; // 接收到的数据的缓冲区，待发送的数据缓冲区
@@ -86,6 +86,7 @@ always @(posedge clk or posedge rst) begin
 			end
 			4'b0101: begin
 			data_received <= data;//将读到的数据放到缓冲区
+			send_begin <= 1; //开始发送缓存区中的数据
 			leds <= data[15:0];
 			oe_r <= 1;
 			we_r <= 1;
@@ -126,7 +127,7 @@ end*/
 reg tra_state = 0;
 always @(posedge clk_50M) begin
 		case(tra_state)
-			4'b0000: if (send_begin && uart_tsre) begin // 如果不忙并且开始发送
+			4'b0000: if (send_begin && !uart_tbre) begin // 如果不忙并且有开始发送信号
 				data[7:0] <= data_received[31:24];
 				rdn_r <= 1; wrn_r <= 0; 
 				send_begin <= 0;//将开始发送信号置为零
@@ -135,28 +136,19 @@ always @(posedge clk_50M) begin
 			else begin
 				tra_state <= 0;
 			end
-			4'b0001: if (!uart_tsre) begin
-				tra_state <= 1;
-			end
-			else begin
+			4'b0001: if (!uart_tbre && uart_tsre) begin
 				data[7:0] <= data_received[23:16];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 2;
 			end
 			4'b0010:
-			if (!uart_tsre) begin
-				tra_state <= 4'b0010;
-			end
-			else begin
+			if (!uart_tbre && uart_tsre) begin
 				data[7:0] <= data_received[15:8];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 3;
 			end
 			4'b0011:
-			if (!uart_tsre) begin
-				tra_state <= 4'b0011;
-			end
-			else begin
+			if (!uart_tbre && uart_tsre)begin
 				data[7:0] <= data_received[7:0];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 0;

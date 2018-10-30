@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Tue Oct 30 15:35:06 2018
-# Process ID: 43
+# Start of session at: Tue Oct 30 16:05:19 2018
+# Process ID: 42
 # Current directory: /home/vivado/project
 # Command line: vivado -mode tcl -source build.tcl thinpad_top.xpr
 # Log file: /home/vivado/project/vivado.log
