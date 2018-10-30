@@ -143,8 +143,25 @@ always@(posedge clock_btn or posedge reset_btn) begin
     end
 end
 
+module state_machine(
+    .clk_50M(clk_50M),
+    .clk(clock_btn),
+    .rst(reset_btn),
+
+    .leds(leds),
+    .data(base_ram_data),
+    .address(base_ram_addr),
+    .push_buttons(dip_sw),
+
+    .oe(base_ram_oe_n), 
+    .we(base_ram_we_n),
+
+    .rxd(rxd),
+    .txd(txd)
+    );
+
 //直连串口接收发送演示，从直连串口收到的数据再发送出去
-wire [7:0] ext_uart_rx;
+/*wire [7:0] ext_uart_rx;
 reg  [7:0] ext_uart_buffer, ext_uart_tx;
 wire ext_uart_ready, ext_uart_busy;
 reg ext_uart_start, ext_uart_avai;
@@ -197,7 +214,7 @@ vga #(12, 800, 856, 976, 1040, 600, 637, 643, 666, 1, 1) vga800x600at75 (
     .hsync(video_hsync),
     .vsync(video_vsync),
     .data_enable(video_de)
-);
+);*/
 /* =========== Demo code end =========== */
 
 endmodule
