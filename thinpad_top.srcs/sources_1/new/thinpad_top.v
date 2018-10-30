@@ -142,7 +142,7 @@ always@(posedge clock_btn or posedge reset_btn) begin
         led_bits <= {led_bits[14:0],led_bits[15]};
     end
 end*/
-
+assign base_ram_ce_n = 0;
 state_machine test(
     .clk_50M(clk_50M),
     .clk(clock_btn),

@@ -1,0 +1,110 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 7352
+License: Customer
+
+Current time: 	Wed Oct 31 02:28:44 CST 2018
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 7
+OS Version: 6.1
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 23 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	E:/Vivado/Vivado/2018.2/tps/win64/jre
+Java executable location: 	E:/Vivado/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	acer
+User home directory: C:/Users/acer
+User working directory: C:/Users/acer/Desktop/thinpad_top
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: E:/Vivado/Vivado
+HDI_APPROOT: E:/Vivado/Vivado/2018.2
+RDI_DATADIR: E:/Vivado/Vivado/2018.2/data
+RDI_BINDIR: E:/Vivado/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/acer/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/acer/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/acer/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	E:/Vivado/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/acer/Desktop/thinpad_top/vivado.log
+Vivado journal file location: 	C:/Users/acer/Desktop/thinpad_top/vivado.jou
+Engine tmp dir: 	C:/Users/acer/Desktop/thinpad_top/.Xil/Vivado-7352-acer-PC
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/Vivado/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: E:/Vivado/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: E:/Vivado/Vivado/2018.2
+XILINX_SDK: E:/Vivado/SDK/2018.2
+XILINX_VIVADO: E:/Vivado/Vivado/2018.2
+XILINX_VIVADO_HLS: E:/Vivado/Vivado/2018.2
+
+
+GUI allocated memory:	146 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 503 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 32 MB (+30635kb) [00:00:06]
+// [Engine Memory]: 310 MB (+173754kb) [00:00:06]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 54 MB (+21973kb) [00:00:18]
+// [Engine Memory]: 493 MB (+175798kb) [00:00:18]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\acer\Desktop\thinpad_top\thinpad_top.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// Tcl Message: open_project C:/Users/acer/Desktop/thinpad_top/thinpad_top.xpr 
+// [GUI Memory]: 62 MB (+5146kb) [00:00:23]
+// HMemoryUtils.trashcanNow. Engine heap size: 514 MB. GUI used memory: 36 MB. Current time: 10/31/18 2:28:47 AM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 549 MB (+32414kb) [00:00:27]
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1892 ms. Increasing delay to 3000 ms.
+// Tcl Message: open_project C:/Users/acer/Desktop/thinpad_top/thinpad_top.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2018.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 576 MB. GUI used memory: 43 MB. Current time: 10/31/18 2:29:13 AM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 746.914 ; gain = 62.273 
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bx)
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bx)
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bx)
+// [Engine Memory]: 598 MB (+22282kb) [00:00:54]
+// Project name: thinpad_top; location: C:/Users/acer/Desktop/thinpad_top; part: xc7a100tfgg676-2L
+dismissDialog("Open Project"); // bx (ck)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 444ms to process. Increasing delay to 3000 ms.
+selectButton("RDIResource.ProgressDialog_ARE_YOU_SURE_YOU_WANT_TO_CANCEL_Yes", "Yes"); // JButton (A, G)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+closeMainWindow("thinpad_top - [C:/Users/acer/Desktop/thinpad_top/thinpad_top.xpr] - Vivado 2018.2"); // ck
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'

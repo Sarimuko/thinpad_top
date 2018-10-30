@@ -1,45 +1,59 @@
 #-----------------------------------------------------------
-# Vivado v2018.1 (64-bit)
-# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
-# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Tue Oct 30 16:05:19 2018
-# Process ID: 42
-# Current directory: /home/vivado/project
-# Command line: vivado -mode tcl -source build.tcl thinpad_top.xpr
-# Log file: /home/vivado/project/vivado.log
-# Journal file: /home/vivado/project/vivado.jou
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Oct 31 05:43:42 2018
+# Process ID: 8784
+# Current directory: C:/Users/acer/Desktop/thinpad_top
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2712 C:\Users\acer\Desktop\thinpad_top\thinpad_top.xpr
+# Log file: C:/Users/acer/Desktop/thinpad_top/vivado.log
+# Journal file: C:/Users/acer/Desktop/thinpad_top\vivado.jou
 #-----------------------------------------------------------
-open_project thinpad_top.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/acer/Desktop/thinpad_top' since last save.
+start_gui
+open_project C:/Users/acer/Desktop/thinpad_top/thinpad_top.xpr
 Scanning sources...
 Finished scanning sources
-CRITICAL WARNING: [Project 1-505] Unrecognized Option Name MEMEnableMemoryMapGeneration
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
-WARNING: [IP_Flow 19-2162] IP 'pll_example' is locked:
-* Project containing IP 'pll_example' is read-only.
-* IP definition 'Clocking Wizard (6.0)' for IP 'pll_example' (customized with software release 2018.2) has a different revision in the IP Catalog.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-WARNING: [Project 1-231] Project 'thinpad_top.xpr' was created with a future version and may or may not perform reliably with this version of Vivado. It has been opened in read-only mode for the protection of unrecognized data. Use 'save_project_as' if you wish to alter a copy of the project.
-source build.tcl
-# update_compile_order -fileset sources_1
-# if { [llength [get_ips]] != 0} {
-#     upgrade_ip [get_ips]
-# 
-#     foreach ip [get_ips] {
-#         create_ip_run [get_ips $ip]
-#     }
-# 
-#     set ip_runs [get_runs -filter {SRCSET != sources_1 && IS_SYNTHESIS && NEEDS_REFRESH}]
-#     
-#     if { [llength $ip_runs] != 0} {
-#         launch_runs -quiet -jobs 2 {*}$ip_runs
-#         
-#         foreach r $ip_runs {
-#             wait_on_run $r
-#         }
-#     }
-# 
-# }
-ERROR: [Project 1-228] Project 'thinpad_top' is read-only. To save your work, please use the 'File | Save Project As...' command first.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 805.902 ; gain = 116.219
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target -xvc_url 192.168.8.8:2542
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+ERROR: [Labtools 27-3419] Disconnecting from hw_server since it's not responding to requests.  It is recommended to investigate hw_server to find any issues.
+ERROR: [Labtools 27-3094] Timeout while opening port to xvc server 192.168.8.8:2542.
+INFO: [Common 17-344] 'open_hw_target' was cancelled
+ERROR: [Labtoolstcl 44-514] HW Server shutdown. Disconnecting from server: localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-XVC-192.168.8.8:2542" may be locked by another hw_server.
+open_hw_target -xvc_url 192.168.8.8:2542
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/192.168.8.8:2542
+open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1452.250 ; gain = 585.520
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/thinpad_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1485.797 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/192.168.8.8:2542
