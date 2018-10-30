@@ -421,3 +421,5 @@ dismissDialog("Program Device"); // bB (ck)
 // 'I' command handler elapsed time: 9 seconds
 dismissDialog("Program Device"); // bx (ck)
 // [GUI Memory]: 104 MB (+870kb) [00:15:38]
+// Elapsed time: 131 seconds
+selectCodeEditor("state_machine.v", 908, 348); // ce (w, ck)
