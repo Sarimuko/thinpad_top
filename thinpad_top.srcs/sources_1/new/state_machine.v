@@ -65,12 +65,12 @@ always @(posedge clk or posedge rst) begin
 			4'b0000:begin
 			 if (received_done) begin
 			// data <= data_received;
-			leds <= data_received[15:0];
+			// leds <= data_received[15:0];
 			data_w <= data_received;
 			state <= 4'b0001;	
 			end
 			else begin
-			    leds <= data_received[15:0];
+			    // leds <= data_received[15:0];
 				state <= 0;
 			end
 			end
@@ -101,7 +101,7 @@ always @(posedge clk or posedge rst) begin
 			4'b0101: begin
 			data_ram <= data_r;//将读到的数据放到缓冲区
 			send_begin <= 1; //开始发送缓存区中的数据
-			leds <= data_r[15:0];
+			// leds <= data_r[15:0];
 			oe_r <= 1;
 			we_r <= 1;
 			state <= 0;
@@ -119,7 +119,7 @@ always @(posedge clk_50M) begin
 	received_done <= 0;//默认是0
 	 // 如果接收到一帧数据，把它依次放在缓冲区里
 		case (rec_state)
-			4'b0000: if (uart_dataready) begin rdn_r <= 0; wrn_r <= 1; rec_state <= 4'b0001; end
+			4'b0000: if (uart_dataready) begin leds <= 16'b1;rdn_r <= 0; wrn_r <= 1; rec_state <= 4'b0001; end
 			4'b0001: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[31:24] <= data_r[7:0]; rec_state <= 4'b0010; end
 			4'b0010: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[23:16] <= data_r[7:0]; rec_state <= 4'b0011; end
 			4'b0011: if (uart_dataready)begin rdn_r <= 0; wrn_r <= 1; data_received[15:8] <= data_r[7:0]; rec_state <= 4'b0100; end
