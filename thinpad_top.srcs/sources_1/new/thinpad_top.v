@@ -104,7 +104,7 @@ assign Func = Instruction[5:0];
 
 /* =========== Single Cycle CPU ========== */
 
-PC PC(CLK, Reset, PCWre, PC, nxtPC);
+PC PC(CLK, Reset, PCWre, PCResult, PC);
 
 assign defaultNxtPC = PC + 4;
 

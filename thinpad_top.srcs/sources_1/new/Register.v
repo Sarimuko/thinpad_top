@@ -44,7 +44,7 @@ module Register(
     assign ReadData2 = register[ReadReg2];
     
     // RegWre : 1 - ��д�Ĵ����Ĳ���
-    always @(posedge CLK) 
+    always @(negedge CLK) 
     begin
         if (RegWrite)
         begin
