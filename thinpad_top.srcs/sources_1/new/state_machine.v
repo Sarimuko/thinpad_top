@@ -12,6 +12,9 @@ module state_machine(
 	output wire oe, 
 	output wire we,
 
+	output txd,
+	input rxd,h
+
 	    //CPLD串口控制器信号
     output uart_rdn,         //读串口信号，低有效
     output uart_wrn,         //写串口信号，低有效
@@ -21,7 +24,8 @@ module state_machine(
 	);
 
 reg [3:0] state = 0;//状态机总状态
-reg [31:0] data_received;// 接受到的所有数据
+reg [31:0] data_received;// 从串口接收到的数据的缓冲区
+reg [31:0] data_ram; // 从存储读到的数据的缓冲区
 reg [19:0] address_buffer;// 存储的地址
 reg received_done = 0; // 是否32位数据已经接受完毕
 reg send_begin = 0;// 是否开始发送数据
@@ -95,9 +99,9 @@ always @(posedge clk or posedge rst) begin
 			state <= 4'b0101;
 			end
 			4'b0101: begin
-			data_received <= data_r;//将读到的数据放到缓冲区
+			data_ram <= data_r;//将读到的数据放到缓冲区
 			send_begin <= 1; //开始发送缓存区中的数据
-			leds <= data[15:0];
+			leds <= data_r[15:0];
 			oe_r <= 1;
 			we_r <= 1;
 			state <= 0;
@@ -138,7 +142,7 @@ reg tra_state = 0;
 always @(posedge clk_50M) begin
 		case(tra_state)
 			4'b0000: if (send_begin && !uart_tbre) begin // 如果不忙并且有开始发送信号
-				data_w[7:0] <= data_received[31:24];
+				data_w[7:0] <= data_ram[31:24];
 				rdn_r <= 1; wrn_r <= 0; 
 				send_begin <= 0;//将开始发送信号置为零
 				tra_state <= 1;
@@ -147,19 +151,19 @@ always @(posedge clk_50M) begin
 				tra_state <= 0;
 			end
 			4'b0001: if (!uart_tbre && uart_tsre) begin
-				data_w[7:0] <= data_received[23:16];
+				data_w[7:0] <= data_ram[23:16];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 2;
 			end
 			4'b0010:
 			if (!uart_tbre && uart_tsre) begin
-				data_w[7:0] <= data_received[15:8];
+				data_w[7:0] <= data_ram[15:8];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 3;
 			end
 			4'b0011:
 			if (!uart_tbre && uart_tsre)begin
-				data_w[7:0] <= data_received[7:0];
+				data_w[7:0] <= data_ram[7:0];
 				rdn_r <= 1; wrn_r <= 0; 
 				tra_state <= 0;
 			end
