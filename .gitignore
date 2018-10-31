@@ -1,7 +1,7 @@
+.DS_Store
 /thinpad_top.cache
 /thinpad_top.hw
 /thinpad_top.runs
-/thinpad_top.srcs
 
 vivado.*
 *.bit
