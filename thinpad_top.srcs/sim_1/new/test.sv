@@ -1,34 +1,33 @@
 `timescale 1ns / 1ps
-module tb;
+module tb();
 
-wire clk_50M, clk_11M0592;
+reg clk_50M = 0;
+reg clk_11M0592 = 0;
 
-reg clock_btn = 0;         //BTN5手动时钟按钮开关，带消抖电路，按下时为1
-reg reset_btn = 0;         //BTN6手动复位按钮开关，带消抖电路，按下时为1
+reg clock_btn = 0;         //BTN5手动时钟按钮�?关，带消抖电路，按下时为1
+reg reset_btn = 0;         //BTN6手动复位按钮�?关，带消抖电路，按下时为1
 
-reg[15:0] OutReg0;
-reg[15:0] OutReg1;
-reg[15:0] OutReg2;
-reg[15:0] OutReg3;
-reg[15:0] OutReg4;
-reg[15:0] OutMem0;
-reg[15:0] OutMem1;
-reg[15:0] OutMem2;
-reg[15:0] OutMem3;
-reg[15:0] OutMem4;
-reg[15:0] OutMem5;
+wire[7:0] OutReg0;
+wire[7:0] OutReg1;
+wire[7:0] OutReg2;
+wire[7:0] OutReg3;
+wire[7:0] OutReg4;
+wire[7:0] OutMem0;
+wire[7:0] OutMem1;
+wire[7:0] OutMem2;
+wire[7:0] OutMem3;
+wire[7:0] OutMem4;
+wire[7:0] OutMem5;
+wire [31:0] outPC;
+wire [31:0] outInstruction;
 reg sign;
-//Windows需要注意路径分隔符的转义，例如"D:\\foo\\bar.bin"
-parameter BASE_RAM_INIT_FILE = "/tmp/main.bin"; //BaseRAM初始化文件，请修改为实际的绝对路径
-parameter EXT_RAM_INIT_FILE = "/tmp/eram.bin";    //ExtRAM初始化文件，请修改为实际的绝对路径
-parameter FLASH_INIT_FILE = "/tmp/kernel.elf";    //Flash初始化文件，请修改为实际的绝对路径
+//Windows�?要注意路径分隔符的转义，例如"D:\\foo\\bar.bin"
 
 initial begin 
     //在这里可以自定义测试输入序列，例如：
     sign = 1;
     reset_btn = 1;
-    #100
-    reset_btn = 0;
+    #200 reset_btn = 0;
     /*for (integer i = 0; i < 20; i = i++) begin
         #100; //等待100ns
         clock_btn = 1; //按下手工时钟按钮
@@ -37,10 +36,13 @@ initial begin
     end*/
 end
 
+always
+begin
+    #100 clk_50M = ~clk_50M;
+end
+
 thinpad_top dut(
     .clk_50M(clk_50M),
-    .clk_11M0592(clk_11M0592),
-    .clock_btn(clock_btn),
     .reset_btn(reset_btn),
     .OutReg0(OutReg0),
     .OutReg1(OutReg1),
@@ -53,12 +55,14 @@ thinpad_top dut(
     .OutMem3(OutMem3),
     .OutMem4(OutMem4),
     .OutMem5(OutMem5),
-    .sign(sign)
+    .sign(sign),
+    .outPC(outPC),
+    .outInstruction(outInstruction)
 );
-
+/*
 clock osc(
     .clk_11M0592(clk_11M0592),
     .clk_50M    (clk_50M)
 );
-
+*/
 endmodule

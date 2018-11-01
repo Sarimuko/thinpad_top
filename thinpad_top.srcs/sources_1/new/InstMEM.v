@@ -1,21 +1,19 @@
 `default_nettype wire
 
 module InstMEM(
-    //input instMemRW,
-    // up to 32 instructions
     input [31:0] addr,
-    // each instruction has 32 bits
     output reg [31:0] Instruction
     );
     
-    // each item is 8 bits and memory array has 128 items
-    // each instruction needs 4 items because each instruction is 32 bits
-    // so the memory can include 32 instructions
     reg [7:0] MEM [0:127];
     
     initial 
     begin
-        $readmemb("/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/testdata.txt", MEM);
+        $readmemb("C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/testdata.txt", MEM);
+        for (integer i=0;i<24;i=i+1)
+        begin
+            $display("%h%h%h%h", MEM[i*4+0], MEM[i*4+1], MEM[i*4+2], MEM[i*4+3]);
+        end
         Instruction = 0;
     end
     
