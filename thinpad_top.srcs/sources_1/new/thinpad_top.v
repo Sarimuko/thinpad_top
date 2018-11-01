@@ -7,7 +7,19 @@ module thinpad_top(
     input wire clock_btn,         //BTN5手动时钟按钮开关，带消抖电路，按下时为1
     input wire reset_btn,         //BTN6手动复位按钮开关，带消抖电路，按下时为1
 
-    input  wire[3:0]  touch_btn,  //BTN1~BTN4，按钮开关，按下时为1
+    output wire[15:0] OutReg0,
+    output wire[15:0] OutReg1,
+    output wire[15:0] OutReg2,
+    output wire[15:0] OutReg3,
+    output wire[15:0] OutReg4,
+    output wire[15:0] OutMem0,
+    output wire[15:0] OutMem1,
+    output wire[15:0] OutMem2,
+    output wire[15:0] OutMem3,
+    output wire[15:0] OutMem4,
+    output wire[15:0] OutMem5,
+
+    /*input  wire[3:0]  touch_btn,  //BTN1~BTN4，按钮开关，按下时为1
     input  wire[31:0] dip_sw,     //32位拨码开关，拨到“ON”时为1
     output wire[15:0] leds,       //16位LED，输出时1点亮
     output wire[7:0]  dpy0,       //数码管低位信号，包括小数点，输出1点亮
@@ -77,17 +89,17 @@ module thinpad_top(
     output wire video_hsync,       //行同步（水平同步）信号
     output wire video_vsync,       //场同步（垂直同步）信号
     output wire video_clk,         //像素时钟输出
-    output wire video_de,           //行数据有效信号，用于区分消隐区
+    output wire video_de,           //行数据有效信号，用于区分消隐区*/
 
-    input wire sign;
+    input wire sign
 );
 
 wire CLK;
 assign CLK = clk_50M;
 
-wire [31:0] PC, nxtPC, defaultNxtPC, Instruction;
+wire [31:0] curPC, nxtPC, defaultNxtPC, Instruction;
 
-wire RegDst, ALUSrc, MemtoReg, RegWrite, MemWrite, Branch, Jump, ExtOp;
+wire RegDst, ALUSrc, MemtoReg, RegWrite, MemWrite, MemRead, Branch, Jump, ExtOp;
 wire [5:0] ALUFunc;
 
 wire [31:0] RegReadData1, RegReadData2, RegWriteData, Immediate;
@@ -96,6 +108,7 @@ wire [31:0] ALUInput1, ALUInput2, ALUResult, RAMWriteData, RAMReadData;
 wire [2:0] ALUOp;
 wire ALUzero;
 wire [31:0] JumpTarget, BeqTarget, BranchResult, PCResult;
+wire [5:0] Func;
 
 assign Reg1 = Instruction[25:21];
 assign Reg2 = Instruction[20:16];
@@ -104,33 +117,33 @@ assign Func = Instruction[5:0];
 
 /* =========== Single Cycle CPU ========== */
 
-PC PC(CLK, Reset, PCWre, PCResult, PC);
+PC PC(CLK, reset_btn, PCResult, curPC);
 
-assign defaultNxtPC = PC + 4;
+assign defaultNxtPC = curPC + 4;
 
-InstMEM InstMEM(PC, Instruction);
+InstMEM InstMEM(curPC, Instruction);
 
-ControlUnit ControlUnit(Instruction, RegDst, ALUSrc, MemtoReg, RegWrite, MemWrite, Branch, Jump, ExtOp);
+ControlUnit ControlUnit(Instruction, RegDst, ALUSrc, MemtoReg, RegWrite, MemWrite, MemRead, Branch, Jump, ALUOp);
 
 MUX #(5) MUX_RegDst(Reg2, Reg3, RegDst, RegWriteAddr);
 
-Register Register(CLK, Reg1, Reg2, RegWriteAddr, RegWrite, RegWriteData, RegReadData1, RegReadData2);
+Register Register(CLK, Reg1, Reg2, RegWriteAddr, RegWrite, RegWriteData, RegReadData1, RegReadData2, OutReg0, OutReg1, OutReg2, OutReg3, OutReg4);
 
 Extend Extend(Instruction[15:0], sign, Immediate);
 
 MUX #(32) MUX_ALUSrc(RegReadData2, Immediate, ALUSrc, ALUInput2);
 
-DataMem DataMem(CLK, MemWrite, MemRead, ALUResult, RegReadData2, RAMReadData);
+DataMem DataMem(CLK, MemWrite, MemRead, ALUResult, RegReadData2, RAMReadData, OutMem0, OutMem1, OutMem2, OutMem3, OutMem4, OutMem5);
 
 MUX #(32) MUX_MemtoReg(ALUResult, RAMReadData, MemtoReg, RegWriteData);
 
-assign BeqTarget = defaultNxtPC + (Immediate << 2)[31:0];
+assign BeqTarget = defaultNxtPC + (Immediate << 2);
 
-assign JumpTarget = {PC[31:28], Instruction[25:0], 2'b00};
+assign JumpTarget = {curPC[31:28], Instruction[25:0], 2'b00};
 
 ALU ALU(RegReadData1, ALUInput2, ALUOp, Func, ALUResult, ALUzero);
 
-MUX #(32) MUX_Branch(defaultNxtPC, BeqTarget, ALUZero and Branch, BranchResult);
+MUX #(32) MUX_Branch(defaultNxtPC, BeqTarget, ALUzero & Branch, BranchResult);
 
 MUX #(32) MUX_Jump(BranchResult, JumpTarget, Jump, PCResult);
 

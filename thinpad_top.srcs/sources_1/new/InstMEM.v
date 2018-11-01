@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`default_nettype wire
 
 module InstMEM(
     //input instMemRW,
@@ -15,18 +15,15 @@ module InstMEM(
     
     initial 
     begin
-        $readmemb("E:/Vivado_workspace/project_1/project_1.srcs/sources_1/new/testdata.txt", MEM);
+        $readmemb("/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/testdata.txt", MEM);
         Instruction = 0;
     end
     
-    always @( addr or instMemRW)
-        if (instMemRW) 
-        begin
-        // big endian
-            //Instruction[31:0] = MEM[addr[7:0]];
-            Instruction[31:24] = MEM[addr];
-            Instruction[23:16] = MEM[addr + 1];
-            Instruction[15:8] = MEM[addr + 2];
-            Instruction[7:0] = MEM[addr + 3];
-        end
+    always @(addr)
+    begin
+        Instruction[31:24] = MEM[addr];
+        Instruction[23:16] = MEM[addr + 1];
+        Instruction[15:8] = MEM[addr + 2];
+        Instruction[7:0] = MEM[addr + 3];
+    end
 endmodule

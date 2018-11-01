@@ -1,3 +1,5 @@
+`default_nettype wire
+
 module ALU(
     input [31:0] A,
     input [31:0] B,

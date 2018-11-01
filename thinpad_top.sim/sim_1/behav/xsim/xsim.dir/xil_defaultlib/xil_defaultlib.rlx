@@ -1,0 +1,19 @@
+0.6
+2018.1
+Apr  4 2018
+18:43:17
+,,,,,,,,,,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv,1541003052,systemVerilog,,,,tb,,xil_defaultlib,/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v,1540991906,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v,,glbl;pll_example;pll_example_pll_example_clk_wiz,,xil_defaultlib,/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v,1540991023,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v,,ALU,,xil_defaultlib,../../../../thinpad_top.srcs/sim_1/new/include;/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v,1540996545,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v,,ControlUnit,,xil_defaultlib,../../../../thinpad_top.srcs/sim_1/new/include;/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v,1540990736,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/MUX.v,,DataMem,,xil_defaultlib,../../../../thinpad_top.srcs/sim_1/new/include;/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v,1540991571,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v,,Extend,,xil_defaultlib,../../../../thinpad_top.srcs/sim_1/new/include;/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v,1540999953,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v,,InstMEM,,xil_defaultlib,/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/MUX.v,1540976820,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v,,MUX,,xil_defaultlib,../../../../thinpad_top.srcs/sim_1/new/include;/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v,1540990927,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v,,PC,,xil_defaultlib,../../../../thinpad_top.srcs/sim_1/new/include;/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v,1540989118,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v,,Register,,xil_defaultlib,../../../../thinpad_top.srcs/sim_1/new/include;/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v,1540945015,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/async.v,,SEG7_LUT,,xil_defaultlib,/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/async.v,1540945015,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v,,ASSERTION_ERROR;BaudTickGen;async_receiver;async_transmitter,,xil_defaultlib,/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v,1540996081,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v,,thinpad_top,,xil_defaultlib,../../../../thinpad_top.srcs/sim_1/new/include;/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,
+/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v,1540945015,verilog,,/home/vivado/project/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v,,vga,,xil_defaultlib,/opt/Xilinx/Vivado/2018.1/data/xilinx_vip/include,,,,,

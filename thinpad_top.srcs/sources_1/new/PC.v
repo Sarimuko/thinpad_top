@@ -12,7 +12,7 @@ module PC(
         end
         else
         begin
-            nxtPC = prePC
+            nxtPC = prePC;
         end
         /*else if (PCWre) 
         begin
