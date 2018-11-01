@@ -18,8 +18,20 @@ wire[7:0] OutMem2;
 wire[7:0] OutMem3;
 wire[7:0] OutMem4;
 wire[7:0] OutMem5;
+wire[7:0] OutMem6;
+wire[7:0] OutMem7;
 wire [31:0] outPC;
 wire [31:0] outInstruction;
+wire RegDst;
+wire ALUSrc;
+wire MemtoReg;
+wire RegWrite;
+wire MemWrite;
+wire MemRead;
+wire Branch;
+wire Jump;
+wire ExtOp;
+wire [2:0] ALUOp;
 reg sign;
 //Windows�?要注意路径分隔符的转义，例如"D:\\foo\\bar.bin"
 
@@ -55,9 +67,21 @@ thinpad_top dut(
     .OutMem3(OutMem3),
     .OutMem4(OutMem4),
     .OutMem5(OutMem5),
+    .OutMem6(OutMem6),
+    .OutMem7(OutMem7),
     .sign(sign),
     .outPC(outPC),
-    .outInstruction(outInstruction)
+    .outInstruction(outInstruction),
+    .RegDst(RegDst),
+    .ALUSrc(ALUSrc),
+    .MemtoReg(MemtoReg),
+    .RegWrite(RegWrite),
+    .MemWrite(MemWrite),
+    .MemRead(MemRead),
+    .Branch(Branch),
+    .Jump(Jump),
+    .ExtOp(ExtOp),
+    .ALUOp(ALUOp)
 );
 /*
 clock osc(

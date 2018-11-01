@@ -7,10 +7,11 @@ module InstMEM(
     
     reg [7:0] MEM [0:127];
     
+    integer i;
     initial 
     begin
         $readmemb("C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/testdata.txt", MEM);
-        for (integer i=0;i<24;i=i+1)
+        for (i=0;i<24;i=i+1)
         begin
             $display("%h%h%h%h", MEM[i*4+0], MEM[i*4+1], MEM[i*4+2], MEM[i*4+3]);
         end

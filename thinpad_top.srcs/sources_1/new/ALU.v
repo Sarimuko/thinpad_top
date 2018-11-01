@@ -15,7 +15,7 @@ module ALU(
     // assign is Continuous Assignments
     assign zero = (result? 0 : 1);
     // if A or B or ALUOp change then result change
-    always @(A or B or ALUOp) begin
+    always @(A or B or ALUOp or func) begin
         case(ALUOp)
             3'b000: result = A + B;
             3'b001: result = A - B;

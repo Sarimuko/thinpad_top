@@ -12,7 +12,9 @@ module DataMem(
     output wire [7:0] Mem2,
     output wire [7:0] Mem3,
     output wire [7:0] Mem4,
-    output wire [7:0] Mem5
+    output wire [7:0] Mem5,
+    output wire [7:0] Mem6,
+    output wire [7:0] Mem7
     );
 
     reg [7:0] memory [0:127];
@@ -23,12 +25,14 @@ module DataMem(
     assign Mem4 = {memory[16], memory[17], memory[18], memory[19]};
     assign Mem5 = {memory[20], memory[21], memory[22], memory[23]};*/
 
-    assign Mem0 = {memory[2]};
-    assign Mem1 = {memory[6]};
-    assign Mem2 = {memory[10]};
-    assign Mem3 = {memory[14]};
-    assign Mem4 = {memory[18]};
-    assign Mem5 = {memory[22]};
+    assign Mem0 = {memory[3]};
+    assign Mem1 = {memory[7]};
+    assign Mem2 = {memory[11]};
+    assign Mem3 = {memory[15]};
+    assign Mem4 = {memory[19]};
+    assign Mem5 = {memory[23]};
+    assign Mem6 = {memory[27]};
+    assign Mem7 = {memory[31]};
     
     integer i;
     initial begin

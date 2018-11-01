@@ -36,7 +36,7 @@ module ControlUnit(
                 ALUSrc = 0;
                 MemtoReg = 0;
                 RegWrite = 1;
-                MemWrite = 1;
+                MemWrite = 0;
                 MemRead = 0;
                 Branch = 0;
                 Jump = 0;
@@ -49,7 +49,7 @@ module ControlUnit(
                 ALUSrc = 0;
                 MemtoReg = 0;
                 RegWrite = 1;
-                MemWrite = 1;
+                MemWrite = 0;
                 MemRead = 0;
                 Branch = 0;
                 Jump = 0;
@@ -84,9 +84,9 @@ module ControlUnit(
             6'b101011:
             // sw
             begin
-                //RegDst = 0;
+                RegDst = 0;
                 ALUSrc = 1;
-                //MemtoReg = 1;
+                MemtoReg = 0;
                 RegWrite = 0;
                 MemWrite = 1;
                 MemRead = 0;
@@ -97,9 +97,9 @@ module ControlUnit(
             6'b000100:
             // beq
             begin
-                //RegDst = 0;
+                RegDst = 0;
                 ALUSrc = 0;
-                //MemtoReg = 1;
+                MemtoReg = 0;
                 RegWrite = 0;
                 MemWrite = 0;
                 MemRead = 0;
@@ -107,12 +107,12 @@ module ControlUnit(
                 Jump = 0;
                 ALUOp = 3'b001;
             end
-            6'd000010:
+            6'b000010:
             // jump
             begin
-                //RegDst = 0;
-                //ALUSrc = 0;
-                //MemtoReg = 1;
+                RegDst = 0;
+                ALUSrc = 0;
+                MemtoReg = 0;
                 RegWrite = 0;
                 MemWrite = 0;
                 MemRead = 0;
@@ -130,9 +130,8 @@ module ControlUnit(
                 MemRead = 0;
                 Branch = 0;
                 Jump = 0;
-                ALUOp = 3'b000;
+                ALUOp = 3'b111;
             end
-
     endcase
   end
 endmodule

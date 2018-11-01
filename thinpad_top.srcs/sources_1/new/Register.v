@@ -1,8 +1,8 @@
 module Register(
     input CLK,
-    input [31:0] ReadReg1,
-    input [31:0] ReadReg2,
-    input [31:0] WriteReg,
+    input [4:0] ReadReg1,
+    input [4:0] ReadReg2,
+    input [4:0] WriteReg,
     input RegWrite,
     input [31:0] WriteData,
     output [31:0] ReadData1,
@@ -15,10 +15,13 @@ module Register(
     );
     
     reg [31:0] register[0:31];
-
-    /*initial begin
-        register[0] = 0;
-    end*/
+    integer i;
+    
+    initial begin
+        for (i = 0; i < 32; i = i + 1) begin
+            register[i] = 0;
+        end
+    end
     
     // RS : address of rs
     // RT : address of rt
