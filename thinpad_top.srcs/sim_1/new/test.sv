@@ -32,12 +32,10 @@ wire Branch;
 wire Jump;
 wire ExtOp;
 wire [2:0] ALUOp;
-reg sign;
 //Windows�?要注意路径分隔符的转义，例如"D:\\foo\\bar.bin"
 
 initial begin 
     //在这里可以自定义测试输入序列，例如：
-    sign = 1;
     reset_btn = 1;
     #200 reset_btn = 0;
     /*for (integer i = 0; i < 20; i = i++) begin
@@ -69,7 +67,6 @@ thinpad_top dut(
     .OutMem5(OutMem5),
     .OutMem6(OutMem6),
     .OutMem7(OutMem7),
-    .sign(sign),
     .outPC(outPC),
     .outInstruction(outInstruction),
     .RegDst(RegDst),

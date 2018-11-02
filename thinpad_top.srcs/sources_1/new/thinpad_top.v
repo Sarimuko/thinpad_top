@@ -16,7 +16,6 @@ module thinpad_top(
     output wire[7:0] OutMem5,
     output wire[7:0] OutMem6,
     output wire[7:0] OutMem7,
-    input wire sign,
     output wire [31:0] outPC,
     output wire [31:0] outInstruction,
     inout wire RegDst,
@@ -62,13 +61,13 @@ assign defaultNxtPC = curPC + 4;
 
 InstMEM InstMEM(curPC, Instruction);
 
-ControlUnit ControlUnit(Instruction, RegDst, ALUSrc, MemtoReg, RegWrite, MemWrite, MemRead, Branch, Jump, ALUOp);
+ControlUnit ControlUnit(Instruction, RegDst, ALUSrc, MemtoReg, RegWrite, MemWrite, MemRead, Branch, Jump, ExtOp, ALUOp);
 
 MUX5 MUX_RegDst(Reg2, Reg3, RegDst, RegWriteAddr);
 
 Register Register(CLK, Reg1, Reg2, RegWriteAddr, RegWrite, RegWriteData, RegReadData1, RegReadData2, OutReg0, OutReg1, OutReg2, OutReg3, OutReg4);
 
-Extend Extend(Instruction[15:0], sign, Immediate);
+Extend Extend(Instruction[15:0], ExtOp, Immediate);
 
 MUX32 MUX_ALUSrc(RegReadData2, Immediate, ALUSrc, ALUInput2);
 

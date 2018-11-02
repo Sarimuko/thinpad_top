@@ -8,6 +8,7 @@ module ControlUnit(
     output reg MemRead,
     output reg Branch,
     output reg Jump,
+    output reg ExtOp,
     output reg [2:0] ALUOp
     );
 
@@ -40,6 +41,7 @@ module ControlUnit(
                 MemRead = 0;
                 Branch = 0;
                 Jump = 0;
+                ExtOp = 0;
                 ALUOp = 3'b011;
             end
             6'b000001:
@@ -53,6 +55,7 @@ module ControlUnit(
                 MemRead = 0;
                 Branch = 0;
                 Jump = 0;
+                ExtOp = 0;
                 ALUOp = 3'b011;
             end
             6'b001101:
@@ -66,6 +69,7 @@ module ControlUnit(
                 MemRead = 0;
                 Branch = 0;
                 Jump = 0;
+                ExtOp = 0;
                 ALUOp = 3'b010;
             end
             6'b100011:
@@ -79,6 +83,7 @@ module ControlUnit(
                 MemRead = 1;
                 Branch = 0;
                 Jump = 0;
+                ExtOp = 1;
                 ALUOp = 3'b000;
             end
             6'b101011:
@@ -92,6 +97,7 @@ module ControlUnit(
                 MemRead = 0;
                 Branch = 0;
                 Jump = 0;
+                ExtOp = 1;
                 ALUOp = 3'b000;
             end
             6'b000100:
@@ -105,6 +111,7 @@ module ControlUnit(
                 MemRead = 0;
                 Branch = 1;
                 Jump = 0;
+                ExtOp = 0;
                 ALUOp = 3'b001;
             end
             6'b000010:
@@ -118,6 +125,7 @@ module ControlUnit(
                 MemRead = 0;
                 Branch = 0;
                 Jump = 1;
+                ExtOp = 0;
                 ALUOp = 3'b000;
             end
             default:
@@ -130,6 +138,7 @@ module ControlUnit(
                 MemRead = 0;
                 Branch = 0;
                 Jump = 0;
+                ExtOp = 0;
                 ALUOp = 3'b111;
             end
     endcase
