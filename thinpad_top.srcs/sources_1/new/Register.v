@@ -3,7 +3,7 @@ module Register(
     input [4:0] ReadReg1,
     input [4:0] ReadReg2,
     input [4:0] WriteReg,
-    input RegWrite,
+    input RegWe,
     input [31:0] WriteData,
     output [31:0] ReadData1,
     output [31:0] ReadData2,
@@ -34,7 +34,7 @@ module Register(
     assign Reg3 = register[3][7:0];
     assign Reg4 = register[4][7:0];
 
-    // RegWre : 1 - ��д�Ĵ����Ĳ���
+    // RegWre : 1 - ??��??????????
     always @(negedge CLK) 
     begin
         if (RegWrite)

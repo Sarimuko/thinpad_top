@@ -1,5 +1,6 @@
-module ControlUnit(
-    input wire [31:0] Instruction,
+module ID2EX(
+    input reg [31:0] defaultPC,
+    input reg [31:0] Instruction,
     output reg RegDst,
     output reg ALUSrc,
     output reg MemtoReg,
@@ -14,18 +15,6 @@ module ControlUnit(
 
     wire [5:0] OP;
     assign OP = Instruction[31:26];
-
-    /*initial begin
-        RegWrite = 0;
-        ExtSel = 0;
-        PCWre = 0;
-        InsMemRW = 1;
-        ALUSrcA = 0;
-        ALUSrcB = 0;
-        RegDst = 0;
-        DBDataSrc = 0;
-        RegWre = 0;
-    end*/
 
     always@(OP) 
     begin

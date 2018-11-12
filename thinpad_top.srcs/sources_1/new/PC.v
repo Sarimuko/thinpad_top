@@ -13,14 +13,5 @@ module PC(
         begin
             nxtPC = prePC;
         end
-        /*else if (PCWre) 
-        begin
-            out_pc = in_pc;
-        end
-        else if (!PCWre) 
-        // halt
-        begin
-            out_pc = out_pc;
-        end*/
     end
 endmodule
