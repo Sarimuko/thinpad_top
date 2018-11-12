@@ -7,6 +7,9 @@ module MEM2WB(
     input reg RegWrite,
     output reg RegWriteOut,
 
+    input reg ReadData,
+    output reg ReadDataOut,
+
     input reg ALUResult,
     output reg ALUResultOut,
     );
@@ -14,6 +17,7 @@ module MEM2WB(
     always @(posedge CLK) begin
         MemtoRegOut <= MemtoReg;
         RegWriteOut <= RegWrite;
+        ReadDataOut <= ReadData;
         ALUResultOut <= ALUResult;
     end
 endmodule

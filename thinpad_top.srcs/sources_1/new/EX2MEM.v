@@ -1,5 +1,6 @@
 module EX2MEM(
     input wire CLK,
+    
     input reg Branch,
     output reg BranchOut,
 
@@ -21,6 +22,12 @@ module EX2MEM(
     input reg RegReadData2,
     output reg RegReadData2Out,
 
+    input Zero,
+    output reg ZeroOut,
+
+    input ALUResult,
+    output reg ALUResultOut,
+
     );
     always @(posedge CLK) begin
         MemReadOut <= MemRead;
@@ -30,5 +37,7 @@ module EX2MEM(
         RegWriteOut <= RegWrite;
         JumpTargetOut <= JumpTarget;
         MemReadData2Out <= MemReadData2;
+        ZeroOut <= Zero;
+        ALUResultOut <= ALUResult;
     end
 endmodule

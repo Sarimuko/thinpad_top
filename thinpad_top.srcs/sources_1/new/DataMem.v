@@ -4,7 +4,7 @@ module DataMem(
     input CLK,
     input MemWrite,
     input MemRead,
-    input [31:0] addr,
+    input [31:0] Addr,
     input [31:0] WriteData,
     output reg [31:0] ReadData,
     output wire [7:0] Mem0,
@@ -45,17 +45,17 @@ module DataMem(
     begin
         if (MemWrite) 
         begin
-            memory[addr] = WriteData[31:24];
-            memory[addr + 1] = WriteData[23:16];
-            memory[addr + 2] = WriteData[15:8];
-            memory[addr + 3] = WriteData[7:0];
+            memory[Addr] = WriteData[31:24];
+            memory[Addr + 1] = WriteData[23:16];
+            memory[Addr + 2] = WriteData[15:8];
+            memory[Addr + 3] = WriteData[7:0];
         end
         else if(MemRead)
         begin
-            ReadData[31:24] = memory[addr];
-            ReadData[23:16] = memory[addr + 1];
-            ReadData[15:8] = memory[addr + 2];
-            ReadData[7:0] = memory[addr + 3];
+            ReadData[31:24] = memory[Addr];
+            ReadData[23:16] = memory[Addr + 1];
+            ReadData[15:8] = memory[Addr + 2];
+            ReadData[7:0] = memory[Addr + 3];
         end
     end
 endmodule

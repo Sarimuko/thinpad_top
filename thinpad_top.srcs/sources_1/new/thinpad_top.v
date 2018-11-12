@@ -40,7 +40,7 @@ wire [31:0] RegReadData1, RegReadData2, RegWriteData, Immediate;
 wire [4:0] Reg1, Reg2, Reg3, RegWriteAddr;
 wire [31:0] ALUInput1, ALUInput2, RAMWriteData, RAMReadData;
 
-wire ALUzero;
+wire ALUZero;
 wire [31:0] JumpTarget, BeqTarget, BranchResult, PCResult;
 wire [5:0] Func;
 
@@ -59,31 +59,43 @@ assign outInstruction = Instruction;
 
 //MUX32 MUX_Jump(BranchResult, JumpTarget, Jump, PCResult);
 
-assign PCResult = DefaultNxtPC;
+assign PCResult = ifDefaultNxtPC;
 
-PC PC(CLK, reset_btn, PCResult, CurPC);
+//PC PC(CLK, reset_btn, PCResult, CurPC);
 
-assign DefaultNxtPC = CurPC + 4;
+assign CurPC = reset_btn ? 0 : PCResult;
 
-InstMEM InstMEM(CurPC, Instruction);
+assign ifDefaultNxtPC = CurPC + 4;
+
+InstMEM InstMEM(
+    .addr(CurPC),
+    .Instruction(ifInstruction)
+);
+
+ID2EX ID2EX(
+    .CLK(CLK),
+    .DefaultNxtPC(ifDefaultNxtPC),
+    .DefaultNxtPCOut(idDefaultNxtPC),
+    .Instruction(ifInstruction),
+    .InstructionOut(idInstruction)
+);
 
 // assign IF2ID = {DefaultNxtPC, Instruction};
 
 /* =========== Reg & Control =========== */
 
 ControlUnit ControlUnit(
-    .CLK(CLK), 
     .Instruction(Instruction),
-    .RegDst(exRegDst),
-    .ALUSrc(exALUSrc),
-    .MemtoReg(exMemtoReg),
-    .RegWrite(exRegWrite),
-    .MemWrite(exMemWrite),
-    .MemRead(exMemRead),
-    .Branch(exBranch),
-    .Jump(exJump),
-    .ExtOp(exExtOp),
-    .ALUOp(exALUOp)
+    .RegDst(idRegDst),
+    .ALUSrc(idALUSrc),
+    .MemtoReg(idMemtoReg),
+    .RegWrite(idRegWrite),
+    .MemWrite(idMemWrite),
+    .MemRead(idMemRead),
+    .Branch(idBranch),
+    .Jump(idJump),
+    .idtOp(idExtOp),
+    .ALUOp(idALUOp)
 );
 
 Register Register(
@@ -93,8 +105,8 @@ Register Register(
     .WriteReg(RegWriteAddr),
     .RegWe(RegWrite),
     .WriteData(RegWriteData),
-    .ReadData1(RegReadData1),
-    .ReadData2(RegReadData2),
+    .ReadData1(idRegReadData1),
+    .ReadData2(idRegReadData2),
     .Reg0(OutReg0),
     .Reg1(OutReg1),
     .Reg2(OutReg2),
@@ -103,20 +115,41 @@ Register Register(
 );
 
 Extend Extend(
-    .CLK(CLK),
     .extInput(Instruction[15:0]),
     .sign(ExtOp),
-    .S(Immediate)
+    .S(idImmediate)
 );
 
 ID2EX ID2EX(
     .CLK(CLK),
-    .DefaultNxtPC(DefaultNxtPC),
-    .DefaultNxtPCOut(exDefaultNxtPC),
+    .ALUSrc(idALUSrc),
+    .ALUSrcOut(exALUSrc),
+    .ALUOp(idALUOp),
+    .ALUOpOut(exALUOp),
+    .RegDst(idRegDst),
+    .RegDstOut(exRegDst),
+    .Branch(idBranch),
+    .BranchOut(exBranch),
+    .MemRead(idMemRead),
+    .MemReadOut(exMemRead),
+    .MemWrite(idMemWrite),
+    .MemWriteOut(exMemWrite),
+    .MemtoReg(idMemtoReg),
+    .MemtoRegOut(exMemtoReg),
+    .RegWrite(idRegWrite),
+    .RegWriteOut(exRegWrite),
+    .RegReadData1(idRegReadData1),
+    .RegReadData1Out(exRegReadData1),
+    .RegReadData2(idRegReadData2),
+    .RegReadData2Out(exRegReadData2),
+    .Immediate(idImmediate),
+    .ImmediateOut(exImmediate),
     .Reg2(Instruction[20:16]),
     .Reg2Out(exReg2),
     .Reg3(Instruction[20:16]),
-    .Reg3Out(exReg3)
+    .Reg3Out(exReg3),
+    .Func(Instruction[5:0]),
+    .FuncOut(exFunc)
 );
 
 /*
@@ -141,27 +174,27 @@ assign ID2EX = {
 /* =========== ALU =========== */
 
 
-MUX32 MUX_ALUSrc(RegReadData2, Immediate, ALUSrc, ALUInput2);
+MUX32 MUX_ALUSrc(exRegReadData2, exImmediate, exALUSrc, exALUInput2);
 
 ALU ALU(
     .CLK(CLK),
-    .A(RegReadData1),
-    .B(ALUInput2),
-    .ALUOp(ALUOp),
-    .func(Func),
-    .result(ALUResult),
-    .zero(ALUzero)
+    .A(exRegReadData1),
+    .B(exALUInput2),
+    .ALUOp(exALUOp),
+    .func(exFunc),
+    .result(exALUResult),
+    .Zero(exZero)
 );
 
 //assign BeqTarget = DefaultNxtPC + (Immediate << 2);
-BeqJumper BeqJumper(
+/*BeqJumper BeqJumper(
     .CLK(CLK),
     .DefaultNxtPC(exDefaultNxtPC),
     .Immediate(Immediate),
     .BeqTarget(BeqTarget)
-)
+)*/
 
-MUX5 MUX_RegDst(Reg2, Reg3, RegDst, RegWriteAddr);
+MUX5 MUX_RegDst(exReg2, exReg3, exRegDst, exRegWriteAddr);
 
 //assign JumpTarget = {CurPC[31:28], Instruction[25:0], 2'b00};
 
@@ -177,10 +210,14 @@ EX2MEM EX2MEM(
     .MemReadOut(memMemRead),
     .MemWrite(exMemWrite),
     .MemWriteOut(memMemWrite),
-    .JumpTarget(JumpTarget),
-    .JumpTargetOut(memJumpTarget),
+    //.JumpTarget(JumpTarget),
+    //.JumpTargetOut(memJumpTarget),
+    .ALUResult(exALUResult),
+    .ALUResultOut(memAddress),
+    .Zero(exZero),
+    .ZeroOut(memZero),
     .RegReadData2(RegReadData2),
-    .RegReadData2Out(memRegReadData2)
+    .RegReadData2Out(memWriteData)
 );
 
 /*
@@ -200,9 +237,24 @@ assign EX2MEM = {
 
 /* =========== Data =========== */
 
-DataMem DataMem(CLK, MemWrite, MemRead, ALUResult, RegReadData2, RAMReadData, OutMem0, OutMem1, OutMem2, OutMem3, OutMem4, OutMem5, OutMem6, OutMem7);
+DataMem DataMem(
+    .CLK(CLK),
+    .MemWrite(memMemWrite),
+    .MemRead(memMemRead),
+    .Addr(memAddress),
+    .WriteData(memWriteData),
+    .ReadData(memReadData),
+    .OutMem0(OutMem0),
+    .OutMem1(OutMem1),
+    .OutMem2(OutMem2),
+    .OutMem3(OutMem3),
+    .OutMem4(OutMem4),
+    .OutMem5(OutMem5),
+    .OutMem6(OutMem6),
+    .OutMem7(OutMem7)
+);
 
-MUX32 MUX_Branch(DefaultNxtPC, BeqTarget, ALUzero & Branch, BranchResult);
+//MUX32 MUX_Branch(DefaultNxtPC, BeqTarget, ALUZero & Branch, BranchResult);
 
 MEM2WB MEM2WB(
     .CLK(CLK),
@@ -210,7 +262,9 @@ MEM2WB MEM2WB(
     .MemtoRegOut(wbMemtoReg),
     .RegWrite(memRegWrite),
     .RegWriteOut(wbRegWrite),
-    .ALUResult(memALUResult),
+    .ReadData(memReadData),
+    .ReadDataOut(wbReadData),
+    .ALUResult(memAddress),
     .ALUResultOut(wbALUResult)
 );
 
@@ -225,6 +279,6 @@ assign MEM2WB = {
 
 /* =========== Write Back =========== */
 
-MUX32 MUX_MemtoReg(ALUResult, RAMReadData, MemtoReg, RegWriteData);
+MUX32 MUX_MemtoReg(wbALUResult, wbReadData, wbMemtoReg, idRegWriteData);
 
 endmodule

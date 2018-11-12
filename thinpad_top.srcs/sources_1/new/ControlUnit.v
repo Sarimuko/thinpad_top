@@ -1,5 +1,4 @@
 module ID2EX(
-    input reg [31:0] defaultPC,
     input reg [31:0] Instruction,
     output reg RegDst,
     output reg ALUSrc,
