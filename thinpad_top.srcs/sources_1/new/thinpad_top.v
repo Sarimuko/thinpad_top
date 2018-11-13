@@ -18,36 +18,26 @@ module thinpad_top(
     output wire[7:0] OutMem7,
     output wire [31:0] outPC,
     output wire [31:0] outInstruction,
-    inout wire RegDst,
-    inout wire ALUSrc,
-    inout wire MemtoReg,
-    inout wire RegWrite,
-    inout wire MemWrite,
-    inout wire MemRead,
-    inout wire Branch,
-    inout wire Jump,
-    inout wire ExtOp,
-    inout wire [2:0] ALUOp
 );
 
 wire CLK;
 assign CLK = clk_50M;
 
-wire [31:0] CurPC, DefaultNxtPC, Instruction;
-wire [31:0] ALUResult;
+//wire [31:0] CurPC, DefaultNxtPC, Instruction;
+//wire [31:0] ALUResult;
 
-wire [31:0] RegReadData1, RegReadData2, RegWriteData, Immediate;
-wire [4:0] Reg1, Reg2, Reg3, RegWriteAddr;
-wire [31:0] ALUInput1, ALUInput2, RAMWriteData, RAMReadData;
+//wire [31:0] RegReadData1, RegReadData2, RegWriteData, Immediate;
+//wire [4:0] Reg1, Reg2, Reg3, RegWriteAddr;
+//wire [31:0] ALUInput1, ALUInput2, RAMWriteData, RAMReadData;
 
-wire ALUZero;
-wire [31:0] JumpTarget, BeqTarget, BranchResult, PCResult;
-wire [5:0] Func;
+//wire ALUZero;
+//wire [31:0] JumpTarget, BeqTarget, BranchResult, PCResult;
+//wire [5:0] Func;
 
-assign Reg1 = Instruction[25:21];
-assign Reg2 = Instruction[20:16];
-assign Reg3 = Instruction[15:11];
-assign Func = Instruction[5:0];
+//assign Reg1 = Instruction[25:21];
+//assign Reg2 = Instruction[20:16];
+//assign Reg3 = Instruction[15:11];
+//assign Func = Instruction[5:0];
 
 assign outPC = CurPC;
 assign outInstruction = Instruction;
@@ -55,9 +45,16 @@ assign outInstruction = Instruction;
 /* =========== Pipeline CPU =========== */
 
 
+
+
+
 /* =========== PC & InstMEM =========== */
 
 //MUX32 MUX_Jump(BranchResult, JumpTarget, Jump, PCResult);
+
+wire [31:0] PCResult, CurPC;
+wire [31:0] ifDefaultNxtPC, ifInstruction;
+wire [31:0] idDefaultNxtPC, idInstruction;
 
 assign PCResult = ifDefaultNxtPC;
 
@@ -80,12 +77,30 @@ ID2EX ID2EX(
     .InstructionOut(idInstruction)
 );
 
-// assign IF2ID = {DefaultNxtPC, Instruction};
+
+
+
 
 /* =========== Reg & Control =========== */
 
+wire idRegDst, exRegDst;
+wire idALUSrc, exALUSrc;
+wire idMemtoReg, exMemtoReg;
+wire idRegWrite, exRegWrite;
+wire idMemWrite, exMemWrite;
+wire idMemRead, exMemRead;
+wire idBranch, exBranch;
+wire idJump, exJump;
+wire idExtOp, exExtOp;
+wire [2:0] idALUOp, exALUOp;
+wire [31:0] idImmediate, exImmediate;
+wire [31:0] idRegReadData1, exRegReadData1;
+wire [31:0] idRegReadData2, exRegReadData2;
+wire [4:0] exReg2, exReg3;
+wire [5:0] exFunc;
+
 ControlUnit ControlUnit(
-    .Instruction(Instruction),
+    .Instruction(idInstruction),
     .RegDst(idRegDst),
     .ALUSrc(idALUSrc),
     .MemtoReg(idMemtoReg),
@@ -98,13 +113,18 @@ ControlUnit ControlUnit(
     .ALUOp(idALUOp)
 );
 
+assign idReg1 = idInstruction[25:21];
+assign idReg2 = idInstruction[20:16];
+assign idReg3 = idInstruction[15:11];
+assign idFunc = idInstruction[5:0];
+
 Register Register(
     .CLK(CLK),
-    .ReadReg1(Reg1),
-    .ReadReg2(Reg2),
-    .WriteReg(RegWriteAddr),
-    .RegWe(RegWrite),
-    .WriteData(RegWriteData),
+    .ReadReg1(idReg1),
+    .ReadReg2(idReg2),
+    .WriteReg(idRegWriteAddr),
+    .RegWe(idRegWrite),
+    .WriteData(idRegWriteData),
     .ReadData1(idRegReadData1),
     .ReadData2(idRegReadData2),
     .Reg0(OutReg0),
@@ -115,8 +135,8 @@ Register Register(
 );
 
 Extend Extend(
-    .extInput(Instruction[15:0]),
-    .sign(ExtOp),
+    .extInput(idInstruction[15:0]),
+    .sign(idExtOp),
     .S(idImmediate)
 );
 
@@ -173,6 +193,13 @@ assign ID2EX = {
 
 /* =========== ALU =========== */
 
+wire idRegDst, exRegDst;
+wire [31:0] exRegWriteAddr;
+wire [31:0] exALUInput2;
+wire [31:0] exALUResult;
+wire [31:0] exRegWriteAddr, memRegWriteAddr;
+wire exZero;
+
 
 MUX32 MUX_ALUSrc(exRegReadData2, exImmediate, exALUSrc, exALUInput2);
 
@@ -217,7 +244,9 @@ EX2MEM EX2MEM(
     .Zero(exZero),
     .ZeroOut(memZero),
     .RegReadData2(RegReadData2),
-    .RegReadData2Out(memWriteData)
+    .RegReadData2Out(memWriteData),
+    .RegWriteAddr(exRegWriteAddr),
+    .RegWriteAddr(memRegWriteAddr)
 );
 
 /*

@@ -28,6 +28,9 @@ module EX2MEM(
     input ALUResult,
     output reg ALUResultOut,
 
+    input RegWriteAddr,
+    output reg RegWriteAddrOut
+
     );
     always @(posedge CLK) begin
         MemReadOut <= MemRead;
@@ -39,5 +42,6 @@ module EX2MEM(
         MemReadData2Out <= MemReadData2;
         ZeroOut <= Zero;
         ALUResultOut <= ALUResult;
+        RegWriteAddrOut <= RegWriteAddr;
     end
 endmodule
