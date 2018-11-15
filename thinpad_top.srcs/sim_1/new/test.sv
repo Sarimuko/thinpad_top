@@ -4,8 +4,8 @@ module tb();
 reg clk_50M = 0;
 reg clk_11M0592 = 0;
 
-reg clock_btn = 0;         //BTN5手动时钟按钮�?关，带消抖电路，按下时为1
-reg reset_btn = 0;         //BTN6手动复位按钮�?关，带消抖电路，按下时为1
+reg clock_btn = 0;         //BTN5手动时钟按钮�??关，带消抖电路，按下时为1
+reg reset_btn = 0;         //BTN6手动复位按钮�??关，带消抖电路，按下时为1
 
 wire[7:0] OutReg0;
 wire[7:0] OutReg1;
@@ -32,12 +32,15 @@ wire Branch;
 wire Jump;
 wire ExtOp;
 wire [2:0] ALUOp;
-//Windows�?要注意路径分隔符的转义，例如"D:\\foo\\bar.bin"
+wire [7:0] debugOut1;
+wire [7:0] debugOut2;
+wire [7:0] debugOut3;
+//Windows�??要注意路径分隔符的转义，例如"D:\\foo\\bar.bin"
 
 initial begin 
     //在这里可以自定义测试输入序列，例如：
     reset_btn = 1;
-    #200 reset_btn = 0;
+    #110 reset_btn = 0;
     /*for (integer i = 0; i < 20; i = i++) begin
         #100; //等待100ns
         clock_btn = 1; //按下手工时钟按钮
@@ -65,20 +68,23 @@ thinpad_top dut(
     .OutMem3(OutMem3),
     .OutMem4(OutMem4),
     .OutMem5(OutMem5),
-    .OutMem6(OutMem6),
-    .OutMem7(OutMem7),
-    .outPC(outPC),
-    .outInstruction(outInstruction),
-    .RegDst(RegDst),
-    .ALUSrc(ALUSrc),
-    .MemtoReg(MemtoReg),
-    .RegWrite(RegWrite),
-    .MemWrite(MemWrite),
-    .MemRead(MemRead),
-    .Branch(Branch),
-    .Jump(Jump),
-    .ExtOp(ExtOp),
-    .ALUOp(ALUOp)
+    //.OutMem6(OutMem6),
+    //.OutMem7(OutMem7),
+    .OutPC(outPC),
+    .OutInstruction(outInstruction),
+    .OutRegDst(RegDst),
+    .OutALUSrc(ALUSrc),
+    .OutMemtoReg(MemtoReg),
+    .OutRegWrite(RegWrite),
+    .OutMemWrite(MemWrite),
+    .OutMemRead(MemRead),
+    .OutBranch(Branch),
+    .OutJump(Jump),
+    .OutExtOp(ExtOp),
+    .OutALUOp(ALUOp),
+    .debugOut1(debugOut1),
+    .debugOut2(debugOut2),
+    .debugOut3(debugOut3)
 );
 /*
 clock osc(

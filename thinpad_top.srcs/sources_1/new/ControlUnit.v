@@ -1,5 +1,6 @@
-module ID2EX(
-    input reg [31:0] Instruction,
+`default_nettype wire
+module ControlUnit(
+    input wire [31:0] Instruction,
     output reg RegDst,
     output reg ALUSrc,
     output reg MemtoReg,

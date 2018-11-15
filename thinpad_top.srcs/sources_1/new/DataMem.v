@@ -7,14 +7,14 @@ module DataMem(
     input [31:0] Addr,
     input [31:0] WriteData,
     output reg [31:0] ReadData,
-    output wire [7:0] Mem0,
-    output wire [7:0] Mem1,
-    output wire [7:0] Mem2,
-    output wire [7:0] Mem3,
-    output wire [7:0] Mem4,
-    output wire [7:0] Mem5,
-    output wire [7:0] Mem6,
-    output wire [7:0] Mem7
+    output wire [7:0] OutMem0,
+    output wire [7:0] OutMem1,
+    output wire [7:0] OutMem2,
+    output wire [7:0] OutMem3,
+    output wire [7:0] OutMem4,
+    output wire [7:0] OutMem5,
+    output wire [7:0] OutMem6,
+    output wire [7:0] OutMem7
     );
 
     reg [7:0] memory [0:127];
@@ -25,14 +25,14 @@ module DataMem(
     assign Mem4 = {memory[16], memory[17], memory[18], memory[19]};
     assign Mem5 = {memory[20], memory[21], memory[22], memory[23]};*/
 
-    assign Mem0 = {memory[3]};
-    assign Mem1 = {memory[7]};
-    assign Mem2 = {memory[11]};
-    assign Mem3 = {memory[15]};
-    assign Mem4 = {memory[19]};
-    assign Mem5 = {memory[23]};
-    assign Mem6 = {memory[27]};
-    assign Mem7 = {memory[31]};
+    assign OutMem0 = {memory[3]};
+    assign OutMem1 = {memory[7]};
+    assign OutMem2 = {memory[11]};
+    assign OutMem3 = {memory[15]};
+    assign OutMem4 = {memory[19]};
+    assign OutMem5 = {memory[23]};
+    assign OutMem6 = {memory[27]};
+    assign OutMem7 = {memory[31]};
     
     integer i;
     initial begin

@@ -2,22 +2,16 @@
 
 module IF2ID(
     input wire CLK,
-    input wire [31:0] defaultNxtPC,
-    output reg [31:0] defaultNxtPCOut,
+    input wire [31:0] DefaultNxtPC,
+    output reg [31:0] DefaultNxtPCOut,
 
-    input wire [4:0] Reg2,
-    output reg [4:0] Reg2Out,
-
-    input wire [4:0] Reg3,
-    output reg [4:0] Reg3Out,
+    input wire [31:0] Instruction,
+    output reg [31:0] InstructionOut
 
     );
 
     always @(posedge CLK) begin
-        Reg2Out <= Reg2;
-        Reg3Out <= Reg3;
-        defaultPCOut <= defaultPC;
+        InstructionOut <= Instruction;
+        DefaultNxtPCOut <= DefaultNxtPC;
     end
-
-  end
 endmodule

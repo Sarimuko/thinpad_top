@@ -1,3 +1,5 @@
+`default_nettype wire
+
 module Register(
     input CLK,
     input [4:0] ReadReg1,
@@ -37,7 +39,7 @@ module Register(
     // RegWre : 1 - ??��??????????
     always @(negedge CLK) 
     begin
-        if (RegWrite)
+        if (RegWe)
         begin
             register[WriteReg] = WriteData;
         end

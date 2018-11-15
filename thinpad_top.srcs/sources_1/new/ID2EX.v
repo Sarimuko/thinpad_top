@@ -30,11 +30,11 @@ module ID2EX(
     /*input JumpTarget,
     output reg JumpTargetOut,*/
 
-    input RegReadData1,
-    output reg RegReadData1Out,
+    input [31:0] RegReadData1,
+    output reg [31:0] RegReadData1Out,
 
-    input RegReadData2,
-    output reg RegReadData2Out,
+    input [31:0] RegReadData2,
+    output reg [31:0] RegReadData2Out,
 
     input [31:0] Immediate,
     output reg [31:0] ImmediateOut,
@@ -46,7 +46,7 @@ module ID2EX(
     output reg [4:0] Reg3Out,
 
     input [5:0] Func,
-    output reg [5:0] FuncOut,
+    output reg [5:0] FuncOut
     );
 
     always @(posedge CLK) begin
@@ -65,5 +65,4 @@ module ID2EX(
         Reg3Out <= Reg3;
         FuncOut <= Func;
     end
-  end
 endmodule

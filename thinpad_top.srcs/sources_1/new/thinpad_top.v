@@ -1,8 +1,8 @@
 `default_nettype none
 
 module thinpad_top(
-    input wire clk_50M,           //50MHz 时钟输入
-    input wire reset_btn,         //BTN6手动复位按钮�?关，带消抖电路，按下时为1
+    input wire clk_50M,           //50MHz ʱ������
+    input wire reset_btn,         //BTN6�ֶ���λ��ť???�أ���������·������ʱΪ1
     output wire[7:0] OutReg0,
     output wire[7:0] OutReg1,
     output wire[7:0] OutReg2,
@@ -14,15 +14,29 @@ module thinpad_top(
     output wire[7:0] OutMem3,
     output wire[7:0] OutMem4,
     output wire[7:0] OutMem5,
-    output wire[7:0] OutMem6,
-    output wire[7:0] OutMem7,
-    output wire [31:0] outPC,
-    output wire [31:0] outInstruction,
+    //output wire[7:0] OutMem6,
+    //output wire[7:0] OutMem7,
+    output wire [31:0] OutPC,
+    output wire [31:0] OutInstruction,
+    output wire OutRegDst,
+    output wire OutALUSrc,
+    output wire OutMemtoReg,
+    output wire OutRegWrite,
+    output wire OutMemWrite,
+    output wire OutMemRead,
+    output wire OutBranch,
+    output wire OutJump,
+    output wire OutExtOp,
+    output wire [2:0] OutALUOp,
+    output wire [7:0] debugOut1,
+    output wire [7:0] debugOut2,
+    output wire [7:0] debugOut3
 );
 
 wire CLK;
 assign CLK = clk_50M;
 
+wire [7:0] OutMem6, OutMem7;
 //wire [31:0] CurPC, DefaultNxtPC, Instruction;
 //wire [31:0] ALUResult;
 
@@ -39,9 +53,6 @@ assign CLK = clk_50M;
 //assign Reg3 = Instruction[15:11];
 //assign Func = Instruction[5:0];
 
-assign outPC = CurPC;
-assign outInstruction = Instruction;
-
 /* =========== Pipeline CPU =========== */
 
 
@@ -56,11 +67,14 @@ wire [31:0] PCResult, CurPC;
 wire [31:0] ifDefaultNxtPC, ifInstruction;
 wire [31:0] idDefaultNxtPC, idInstruction;
 
+assign OutPC = CurPC;
+assign OutInstruction = idInstruction;
+
 assign PCResult = ifDefaultNxtPC;
 
-//PC PC(CLK, reset_btn, PCResult, CurPC);
+PC PC(CLK, reset_btn, PCResult, CurPC);
 
-assign CurPC = reset_btn ? 0 : PCResult;
+//assign CurPC = reset_btn ? 0 : PCResult;
 
 assign ifDefaultNxtPC = CurPC + 4;
 
@@ -69,7 +83,7 @@ InstMEM InstMEM(
     .Instruction(ifInstruction)
 );
 
-ID2EX ID2EX(
+IF2ID IF2ID(
     .CLK(CLK),
     .DefaultNxtPC(ifDefaultNxtPC),
     .DefaultNxtPCOut(idDefaultNxtPC),
@@ -83,21 +97,21 @@ ID2EX ID2EX(
 
 /* =========== Reg & Control =========== */
 
-wire idRegDst, exRegDst;
-wire idALUSrc, exALUSrc;
-wire idMemtoReg, exMemtoReg;
-wire idRegWrite, exRegWrite;
-wire idMemWrite, exMemWrite;
-wire idMemRead, exMemRead;
-wire idBranch, exBranch;
-wire idJump, exJump;
-wire idExtOp, exExtOp;
-wire [2:0] idALUOp, exALUOp;
+wire idRegDst, exRegDst; assign OutRegDst = idRegDst;
+wire idALUSrc, exALUSrc; assign OutALUSrc = idALUSrc;
+wire idMemtoReg, exMemtoReg; assign OutMemtoReg = idMemtoReg;
+wire idRegWrite, exRegWrite; assign OutRegWrite = idRegWrite;
+wire idMemWrite, exMemWrite; assign OutMemWrite = idMemWrite;
+wire idMemRead, exMemRead; assign OutMemRead = idMemRead;
+wire idBranch, exBranch; assign OutBranch = idBranch;
+wire idJump, exJump; assign OutJump = idJump;
+wire idExtOp, exExtOp; assign OutExtOp = idExtOp;
+wire [2:0] idALUOp, exALUOp; assign OutALUOp = idALUOp;
 wire [31:0] idImmediate, exImmediate;
 wire [31:0] idRegReadData1, exRegReadData1;
 wire [31:0] idRegReadData2, exRegReadData2;
-wire [4:0] exReg2, exReg3;
-wire [5:0] exFunc;
+wire [4:0] idReg1, idReg2, exReg2, idReg3, exReg3;
+wire [5:0] idFunc, exFunc;
 
 ControlUnit ControlUnit(
     .Instruction(idInstruction),
@@ -109,7 +123,7 @@ ControlUnit ControlUnit(
     .MemRead(idMemRead),
     .Branch(idBranch),
     .Jump(idJump),
-    .idtOp(idExtOp),
+    .ExtOp(idExtOp),
     .ALUOp(idALUOp)
 );
 
@@ -122,9 +136,9 @@ Register Register(
     .CLK(CLK),
     .ReadReg1(idReg1),
     .ReadReg2(idReg2),
-    .WriteReg(idRegWriteAddr),
-    .RegWe(idRegWrite),
-    .WriteData(idRegWriteData),
+    .WriteReg(wbRegWriteAddr),
+    .RegWe(wbRegWrite),
+    .WriteData(wbRegWriteData),
     .ReadData1(idRegReadData1),
     .ReadData2(idRegReadData2),
     .Reg0(OutReg0),
@@ -164,11 +178,11 @@ ID2EX ID2EX(
     .RegReadData2Out(exRegReadData2),
     .Immediate(idImmediate),
     .ImmediateOut(exImmediate),
-    .Reg2(Instruction[20:16]),
+    .Reg2(idReg2),
     .Reg2Out(exReg2),
-    .Reg3(Instruction[20:16]),
+    .Reg3(idReg3),
     .Reg3Out(exReg3),
-    .Func(Instruction[5:0]),
+    .Func(idFunc),
     .FuncOut(exFunc)
 );
 
@@ -193,18 +207,21 @@ assign ID2EX = {
 
 /* =========== ALU =========== */
 
-wire idRegDst, exRegDst;
-wire [31:0] exRegWriteAddr;
 wire [31:0] exALUInput2;
-wire [31:0] exALUResult;
-wire [31:0] exRegWriteAddr, memRegWriteAddr;
-wire exZero;
+wire [31:0] exALUResult, memWriteData;
+wire [4:0] exRegWriteAddr, memRegWriteAddr;
+wire memRegWrite;
+wire memMemtoReg;
+wire memBranch;
+wire memMemRead;
+wire memMemWrite;
+wire [31:0] memAddress;
+wire exZero, memZero;
 
 
 MUX32 MUX_ALUSrc(exRegReadData2, exImmediate, exALUSrc, exALUInput2);
 
 ALU ALU(
-    .CLK(CLK),
     .A(exRegReadData1),
     .B(exALUInput2),
     .ALUOp(exALUOp),
@@ -243,10 +260,10 @@ EX2MEM EX2MEM(
     .ALUResultOut(memAddress),
     .Zero(exZero),
     .ZeroOut(memZero),
-    .RegReadData2(RegReadData2),
+    .RegReadData2(exRegReadData2),
     .RegReadData2Out(memWriteData),
     .RegWriteAddr(exRegWriteAddr),
-    .RegWriteAddr(memRegWriteAddr)
+    .RegWriteAddrOut(memRegWriteAddr)
 );
 
 /*
@@ -265,6 +282,10 @@ assign EX2MEM = {
 */
 
 /* =========== Data =========== */
+wire [31:0] memReadData;
+wire wbMemtoReg, wbRegWrite;
+wire [31:0] wbReadData, wbALUResult;
+wire [4:0] wbRegWriteAddr;
 
 DataMem DataMem(
     .CLK(CLK),
@@ -294,7 +315,9 @@ MEM2WB MEM2WB(
     .ReadData(memReadData),
     .ReadDataOut(wbReadData),
     .ALUResult(memAddress),
-    .ALUResultOut(wbALUResult)
+    .ALUResultOut(wbALUResult),
+    .MemWriteAddr(memRegWriteAddr),
+    .MemWriteAddrOut(wbRegWriteAddr)
 );
 
 /*
@@ -308,6 +331,14 @@ assign MEM2WB = {
 
 /* =========== Write Back =========== */
 
-MUX32 MUX_MemtoReg(wbALUResult, wbReadData, wbMemtoReg, idRegWriteData);
+wire [31:0] wbRegWriteData;
+
+MUX32 MUX_MemtoReg(wbALUResult, wbReadData, wbMemtoReg, wbRegWriteData);
+
+//assign debugOut = {idRegWrite, exRegWrite, memRegWrite, wbRegWrite, 2'b0};
+
+assign debugOut1 = exALUResult[7:0];
+assign debugOut2 = idRegReadData1[7:0];
+assign debugOut3 = exRegReadData1[7:0];
 
 endmodule
