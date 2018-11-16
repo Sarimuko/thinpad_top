@@ -1,5 +1,8 @@
 `default_nettype wire
 
+// ranking: immediate, memforward, wbforward, regdata
+
+//mux before alu.
 module MUX_ALU
     (
     input [31:0] memData,
@@ -12,9 +15,13 @@ module MUX_ALU
     output reg [31:0] S
 );
     wire [2:0] Control;
-    assign Control = {forwardMem, forwardWb, ALUSrc};
+    assign Control = {forwardMem, forwardWb, ALUSrc}; 
     always @(*) begin
-        if (forwardMem) 
+        if (not ALUSrc) // immediate
+        begin
+            S = immediate;
+        end
+        else if (forwardMem) 
         begin
             S = memData;
         end
@@ -22,13 +29,9 @@ module MUX_ALU
         begin
             S = forwardWb;
         end
-        else if(ALUSrc) // 1 when from reg
+        else // no forward
         begin
             S = regData;
-        end
-        else
-        begin
-            S = immediate;
         end
     end
 endmodule

@@ -110,13 +110,14 @@ wire [2:0] idALUOp, exALUOp; assign OutALUOp = idALUOp;
 wire [31:0] idImmediate, exImmediate;
 wire [31:0] idRegReadData1, exRegReadData1;
 wire [31:0] idRegReadData2, exRegReadData2;
-wire [4:0] idReg1, idReg2, exReg2, idReg3, exReg3;
+wire [4:0] idReg1, exReg1, idReg2, exReg2, idReg3, exReg3;
 wire [5:0] idFunc, exFunc;
 
 ControlUnit ControlUnit(
     .Instruction(idInstruction),
     .RegDst(idRegDst),
-    .ALUSrc(idALUSrc),
+    .ALUSrc1(idALUSrc1),
+    .ALUSrc2(idALUSrc2),
     .MemtoReg(idMemtoReg),
     .RegWrite(idRegWrite),
     .MemWrite(idMemWrite),
@@ -178,6 +179,8 @@ ID2EX ID2EX(
     .RegReadData2Out(exRegReadData2),
     .Immediate(idImmediate),
     .ImmediateOut(exImmediate),
+    .Reg1(idReg1),
+    .Reg1Out(exReg1),
     .Reg2(idReg2),
     .Reg2Out(exReg2),
     .Reg3(idReg3),
@@ -207,7 +210,7 @@ assign ID2EX = {
 
 /* =========== ALU =========== */
 
-wire [31:0] exALUInput2;
+wire [31:0] exALUInput1, exALUInput2;
 wire [31:0] exALUResult, memWriteData;
 wire [4:0] exRegWriteAddr, memRegWriteAddr;
 wire memRegWrite;
@@ -217,12 +220,34 @@ wire memMemRead;
 wire memMemWrite;
 wire [31:0] memAddress;
 wire exZero, memZero;
+wire forwardMem1, forwardMem2, forwardWb1, forwardWb2;
 
+//MUX32 MUX_ALUSrc(exRegReadData2, exImmediate, exALUSrc, exALUInput2);
 
-MUX32 MUX_ALUSrc(exRegReadData2, exImmediate, exALUSrc, exALUInput2);
+MUX_ALU MUX_ALU1(
+    .memData(exALUResult),
+    .wbData(wbReadData),
+    .immediate(exImmediate),
+    .regData(exRegReadData1),
+    .forwardMem(forwardMem1),
+    .forwardWb(forwardWb1),
+    .ALUSrc(exALUSrc1),
+    .S(exALUInput1)
+);
+
+MUX_ALU MUX_ALU2(
+    .memData(exALUResult),
+    .wbData(wbReadData),
+    .immediate(exImmediate),
+    .regData(exRegReadData2),
+    .forwardMem(forwardMem2),
+    .forwardWb(forwardWb2),
+    .ALUSrc(exALUSrc2),
+    .S(exALUInput2)
+)
 
 ALU ALU(
-    .A(exRegReadData1),
+    .A(exALUInput1),
     .B(exALUInput2),
     .ALUOp(exALUOp),
     .func(exFunc),
@@ -336,6 +361,35 @@ wire [31:0] wbRegWriteData;
 MUX32 MUX_MemtoReg(wbALUResult, wbReadData, wbMemtoReg, wbRegWriteData);
 
 //assign debugOut = {idRegWrite, exRegWrite, memRegWrite, wbRegWrite, 2'b0};
+
+/* =========== Forward =========== */
+
+Forward Forward(
+    .memRegWriteAddr(memRegWriteAddr),
+    .wbRegWriteAddr(wbRegWriteAddr),
+    .memRegWrite(memRegWrite),
+    .wbRegWrite(wbRegWrite),
+    .Reg1(exReg1),
+    .Reg2(exReg2),
+    .forwardMem1(forwardMem1),
+    .forwardMem2(forwardMem2),
+    .forwardWb1(forwardWb1),
+    .forwardWb2(forwardWb2)
+);
+
+input [4:0] memRegWriteAddr,
+    input [4:0] wbRegWriteAddr,
+    input memRegWrite,
+    input wbRegWrite,
+    input [4:0] Reg1,
+    input [4:0] Reg2,
+
+    output reg forwardWb1,
+    output reg forwardWb2,
+    output reg forwardMem1,
+    output reg forwardMem2
+
+/* =========== Debug =========== */
 
 assign debugOut1 = exALUResult[7:0];
 assign debugOut2 = idRegReadData1[7:0];
