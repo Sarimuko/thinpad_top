@@ -1,9 +1,13 @@
 Vivado Simulator 2018.2
 Time resolution is 1 ps
-34000001
-34210001
-34630008
-34840028
+24000007
+00000821
+00011021
+30430006
+00430821
+00222027
+00442025
+34000010
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx
@@ -20,7 +24,5 @@ xxxxxxxx
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx
-xxxxxxxx
-xxxxxxxx
-xxxxxxxx
-xxxxxxxx
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 130 ns  Iteration: 10000

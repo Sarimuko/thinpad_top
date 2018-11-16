@@ -17,7 +17,7 @@ module MUX_ALU
     wire [2:0] Control;
     assign Control = {forwardMem, forwardWb, ALUSrc}; 
     always @(*) begin
-        if (not ALUSrc) // immediate
+        if (ALUSrc == 0) // immediate
         begin
             S = immediate;
         end

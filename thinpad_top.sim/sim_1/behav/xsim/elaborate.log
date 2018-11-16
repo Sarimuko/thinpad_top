@@ -5,6 +5,9 @@ Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX_ALU.v" Line 6. Module MUX_ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX_ALU.v" Line 6. Module MUX_ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Forward.v" Line 3. Module Forward doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.PC
@@ -14,12 +17,14 @@ Compiling module xil_defaultlib.ControlUnit
 Compiling module xil_defaultlib.Register
 Compiling module xil_defaultlib.Extend
 Compiling module xil_defaultlib.ID2EX
-Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.MUX_ALU
 Compiling module xil_defaultlib.ALU
 Compiling module xil_defaultlib.MUX5
 Compiling module xil_defaultlib.EX2MEM
 Compiling module xil_defaultlib.DataMem
 Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.Forward
 Compiling module xil_defaultlib.thinpad_top
 Compiling module xil_defaultlib.tb
 Compiling module xil_defaultlib.glbl

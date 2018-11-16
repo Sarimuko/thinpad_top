@@ -3,8 +3,11 @@
 module ID2EX(
     input wire CLK,
 
-    input ALUSrc,
-    output reg ALUSrcOut,
+    input ALUSrc1,
+    output reg ALUSrc1Out,
+    
+    input ALUSrc2,
+    output reg ALUSrc2Out,
 
     input [2:0] ALUOp,
     output reg [2:0] ALUOpOut,
@@ -53,7 +56,8 @@ module ID2EX(
     );
 
     always @(posedge CLK) begin
-        ALUSrcOut <= ALUSrc;
+        ALUSrc1Out <= ALUSrc1;
+        ALUSrc2Out <= ALUSrc2;
         ALUOpOut <= ALUOp;
         RegDstOut <= RegDst;
         BranchOut <= Branch;

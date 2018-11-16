@@ -18,22 +18,30 @@ module Forward(
     begin
         if (memRegWrite && Reg1 != 0 && Reg1 == memRegWriteAddr) begin
             forwardMem1 = 1;
-        else begin
+        end
+        else
+        begin
             forwardMem1 = 0;
         end
         if (memRegWrite && Reg2 != 0 && Reg2 == memRegWriteAddr) begin
             forwardMem2 = 1;
-        else begin
+        end
+        else
+        begin
             forwardMem2 = 0;
         end
         if (wbRegWrite && Reg1 != 0 && Reg1 == wbRegWriteAddr) begin
             forwardWb1 = 1;
-        else begin
+        end
+        else
+        begin
             forwardWb1 = 0;
         end
         if (wbRegWrite && Reg2 != 0 && Reg2 == wbRegWriteAddr) begin
             forwardWb2 = 1;
-        else begin
+        end
+        else
+        begin
             forwardWb2 = 0;
         end
     end

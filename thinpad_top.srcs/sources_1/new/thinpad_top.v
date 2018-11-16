@@ -19,7 +19,8 @@ module thinpad_top(
     output wire [31:0] OutPC,
     output wire [31:0] OutInstruction,
     output wire OutRegDst,
-    output wire OutALUSrc,
+    output wire OutALUSrc1,
+    output wire OutALUSrc2,
     output wire OutMemtoReg,
     output wire OutRegWrite,
     output wire OutMemWrite,
@@ -98,7 +99,8 @@ IF2ID IF2ID(
 /* =========== Reg & Control =========== */
 
 wire idRegDst, exRegDst; assign OutRegDst = idRegDst;
-wire idALUSrc, exALUSrc; assign OutALUSrc = idALUSrc;
+wire idALUSrc1, idALUSrc2, exALUSrc1, exALUSrc2; 
+assign OutALUSrc1 = idALUSrc1; assign OutALUSrc2 = idALUSrc2;
 wire idMemtoReg, exMemtoReg; assign OutMemtoReg = idMemtoReg;
 wire idRegWrite, exRegWrite; assign OutRegWrite = idRegWrite;
 wire idMemWrite, exMemWrite; assign OutMemWrite = idMemWrite;
@@ -157,8 +159,10 @@ Extend Extend(
 
 ID2EX ID2EX(
     .CLK(CLK),
-    .ALUSrc(idALUSrc),
-    .ALUSrcOut(exALUSrc),
+    .ALUSrc1(idALUSrc1),
+    .ALUSrc1Out(exALUSrc1),
+    .ALUSrc2(idALUSrc2),
+    .ALUSrc2Out(exALUSrc2),
     .ALUOp(idALUOp),
     .ALUOpOut(exALUOp),
     .RegDst(idRegDst),
@@ -244,13 +248,13 @@ MUX_ALU MUX_ALU2(
     .forwardWb(forwardWb2),
     .ALUSrc(exALUSrc2),
     .S(exALUInput2)
-)
+);
 
 ALU ALU(
     .A(exALUInput1),
     .B(exALUInput2),
     .ALUOp(exALUOp),
-    .func(exFunc),
+    .Func(exFunc),
     .result(exALUResult),
     .Zero(exZero)
 );
@@ -376,18 +380,6 @@ Forward Forward(
     .forwardWb1(forwardWb1),
     .forwardWb2(forwardWb2)
 );
-
-input [4:0] memRegWriteAddr,
-    input [4:0] wbRegWriteAddr,
-    input memRegWrite,
-    input wbRegWrite,
-    input [4:0] Reg1,
-    input [4:0] Reg2,
-
-    output reg forwardWb1,
-    output reg forwardWb2,
-    output reg forwardMem1,
-    output reg forwardMem2
 
 /* =========== Debug =========== */
 

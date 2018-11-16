@@ -23,7 +23,7 @@ wire[7:0] OutMem7;
 wire [31:0] outPC;
 wire [31:0] outInstruction;
 wire RegDst;
-wire ALUSrc;
+wire ALUSrc1, ALUSrc2;
 wire MemtoReg;
 wire RegWrite;
 wire MemWrite;
@@ -40,7 +40,7 @@ wire [7:0] debugOut3;
 initial begin 
     //在这里可以自定义测试输入序列，例如：
     reset_btn = 1;
-    #110 reset_btn = 0;
+    #25 reset_btn = 0;
     /*for (integer i = 0; i < 20; i = i++) begin
         #100; //等待100ns
         clock_btn = 1; //按下手工时钟按钮
@@ -51,7 +51,7 @@ end
 
 always
 begin
-    #100 clk_50M = ~clk_50M;
+    #10 clk_50M = ~clk_50M;
 end
 
 thinpad_top dut(
@@ -73,7 +73,8 @@ thinpad_top dut(
     .OutPC(outPC),
     .OutInstruction(outInstruction),
     .OutRegDst(RegDst),
-    .OutALUSrc(ALUSrc),
+    .OutALUSrc1(ALUSrc1),
+    .OutALUSrc2(ALUSrc2),
     .OutMemtoReg(MemtoReg),
     .OutRegWrite(RegWrite),
     .OutMemWrite(MemWrite),

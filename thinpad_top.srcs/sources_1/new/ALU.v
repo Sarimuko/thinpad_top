@@ -15,7 +15,7 @@ module ALU(
     input [31:0] A,
     input [31:0] B,
     input [2:0] ALUOp,
-    input [5:0] func,
+    input [5:0] Func,
     output reg [31:0] result,
     output reg Zero
     );
@@ -23,19 +23,21 @@ module ALU(
         result = 0;
     end
     reg [31:0] RTypeOut;
+    
     always @(*) begin
         case(Func)
-            ADDU: RTypeOut = A + B;
-            AND: RTypeOut = A & B;
-            CLZ: RTypeOut = A + B; // to do
-            NOR: RTypeOut = ~(A | B);
-            OR: RTypeOut = A | B;
-            SLL: RTypeOut = B << (A[10:6]);
-            SRL: RTypeOut = B >> (A[10:6]);
-            SUB: RTypeOut = A - B;
-            XOR: RTypeOut = A ^ B;
+            `ADDU: RTypeOut = A + B;
+            `AND: RTypeOut = A & B;
+            `CLZ: RTypeOut = A + B; // to do
+            `NOR: RTypeOut = ~(A | B);
+            `OR: RTypeOut = A | B;
+            `SLL: RTypeOut = B << (A[10:6]);
+            `SRL: RTypeOut = B >> (A[10:6]);
+            `SUB: RTypeOut = A - B;
+            `XOR: RTypeOut = A ^ B;
         endcase;
     end
+    
     always @(*) begin
         case(ALUOp)
             3'b001: result = A + B;
@@ -48,4 +50,5 @@ module ALU(
         endcase
         Zero = (result? 0 : 1);
     end
+    
 endmodule

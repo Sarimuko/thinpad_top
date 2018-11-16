@@ -1,0 +1,2587 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov 15 12:58:53 2018
+# Process ID: 8128
+# Current directory: C:/Users/acer/Desktop/thinpad_top
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8876 C:\Users\acer\Desktop\thinpad_top\thinpad_top.xpr
+# Log file: C:/Users/acer/Desktop/thinpad_top/vivado.log
+# Journal file: C:/Users/acer/Desktop/thinpad_top\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/acer/Desktop/thinpad_top/thinpad_top.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/imports/CFImemory64Mb_top.mem'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/imports/CFImemory64Mb_bottom.mem'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 788.500 ; gain = 76.148
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 12:59:57 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 12:59:57 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:328]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Nov 15 13:03:09 2018. For additional details about this file, please refer to the WebTalk help file at E:/Vivado/Vivado/2018.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 56.984 ; gain = 1.305
+INFO: [Common 17-206] Exiting Webtalk at Thu Nov 15 13:03:09 2018...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 816.324 ; gain = 0.055
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:01:17 ; elapsed = 00:01:05 . Memory (MB): peak = 837.723 ; gain = 0.602
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:01:22 ; elapsed = 00:01:09 . Memory (MB): peak = 837.723 ; gain = 8.145
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:01:27 ; elapsed = 00:01:24 . Memory (MB): peak = 837.723 ; gain = 27.301
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 847.789 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:328]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:01:26 ; elapsed = 00:00:54 . Memory (MB): peak = 859.816 ; gain = 12.027
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:01:29 ; elapsed = 00:00:56 . Memory (MB): peak = 859.816 ; gain = 12.027
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:01:30 ; elapsed = 00:01:00 . Memory (MB): peak = 859.816 ; gain = 12.027
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property -name {xsim.simulate.runtime} -value {200ns} -objects [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:328]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 200ns
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:47 ; elapsed = 00:00:29 . Memory (MB): peak = 963.602 ; gain = 3.406
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:50 ; elapsed = 00:00:31 . Memory (MB): peak = 963.602 ; gain = 12.324
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:53 ; elapsed = 00:00:37 . Memory (MB): peak = 963.602 ; gain = 18.973
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property -name {xsim.simulate.runtime} -value {150ns} -objects [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:328]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 150ns
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 150ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 963.602 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:328]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 150ns
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:31 ; elapsed = 00:00:18 . Memory (MB): peak = 969.289 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:33 ; elapsed = 00:00:20 . Memory (MB): peak = 969.289 ; gain = 0.000
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:34 ; elapsed = 00:00:26 . Memory (MB): peak = 969.289 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property -name {xsim.simulate.runtime} -value {10us} -objects [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:328]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 969.602 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 13:20:03 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 13:20:03 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:328]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 999.246 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 13:26:54 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 13:26:54 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:135]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:171]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:238]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:256]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:260]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:289]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:310]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port MemWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:314]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:331]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 999.246 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 13:31:15 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 13:31:15 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port MemWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:315]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:332]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 999.246 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 13:47:45 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 13:47:45 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Nov 15 13:48:32 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:136]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:172]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:257]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:290]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:311]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port MemWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:315]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:332]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1002.414 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 13:54:39 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 13:54:39 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 13:55:17 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 13:55:17 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:137]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:176]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:240]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:258]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:265]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:291]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:312]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port MemWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:316]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:333]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.836 ; gain = 0.000
+add_bp {C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v} 23
+remove_bps -file {C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v} -line 23
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 14:03:19 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 14:03:19 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:137]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:173]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:174]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:176]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:240]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:258]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:262]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:265]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:291]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:312]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port MemWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:316]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:333]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1007.836 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 14:08:10 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 14:08:10 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 14:10:37 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 14:10:37 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sim_1/new/test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:139]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:175]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData1Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:176]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:177]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:178]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:242]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:260]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:265]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:266]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:267]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:293]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:314]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port MemWriteAddr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:318]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:335]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1012.113 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 14:16:16 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 14:16:16 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:139]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:242]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port ALUResultOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:261]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:265]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:293]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:314]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:316]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port ALUResultOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:317]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port MemWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:319]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:335]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1023.723 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 14:21:01 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+[Thu Nov 15 14:21:01 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 5 for port WriteReg [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:139]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 5 for port S [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:241]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port ALUResultOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:260]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:263]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port RegReadData2Out [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:264]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Addr [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:292]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port ReadData [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:313]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port ALUResult [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:315]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port ALUResultOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:316]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port MemWriteAddrOut [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:318]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port Input0 [C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v:334]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1023.723 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Nov 15 14:27:59 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Nov 15 14:32:38 2018] Launched synth_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Thu Nov 15 14:34:08 2018] Launched impl_1...
+Run output will be captured here: C:/Users/acer/Desktop/thinpad_top/thinpad_top.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Vivado/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/InstMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MUX5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX5
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/IF2ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF2ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/EX2MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/MEM2WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM2WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/acer/Desktop/thinpad_top/thinpad_top.srcs/sources_1/new/ID2EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID2EX
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1e0777dd008c45fcbaffd6b18f2c35e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.InstMEM
+Compiling module xil_defaultlib.IF2ID
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.ID2EX
+Compiling module xil_defaultlib.MUX32
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MUX5
+Compiling module xil_defaultlib.EX2MEM
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.MEM2WB
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/acer/Desktop/thinpad_top/thinpad_top.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10us
+34000001
+34210001
+34630008
+34840028
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+xxxxxxxx
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10us
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1037.719 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 15 14:37:22 2018...
