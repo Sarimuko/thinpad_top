@@ -26,6 +26,7 @@ module thinpad_top(
     output wire OutMemWrite,
     output wire OutMemRead,
     output wire OutBranch,
+    output wire [4:0] OutForward,
     output wire OutJump,
     output wire OutExtOp,
     output wire [2:0] OutALUOp,
@@ -228,9 +229,11 @@ wire forwardMem1, forwardMem2, forwardWb1, forwardWb2;
 
 //MUX32 MUX_ALUSrc(exRegReadData2, exImmediate, exALUSrc, exALUInput2);
 
+assign OutForward = {forwardMem1, forwardWb1, forwardMem2, forwardWb2};
+
 MUX_ALU MUX_ALU1(
-    .memData(exALUResult),
-    .wbData(wbReadData),
+    .memData(memAddress),
+    .wbData(wbRegWriteData),
     .immediate(exImmediate),
     .regData(exRegReadData1),
     .forwardMem(forwardMem1),
@@ -240,8 +243,8 @@ MUX_ALU MUX_ALU1(
 );
 
 MUX_ALU MUX_ALU2(
-    .memData(exALUResult),
-    .wbData(wbReadData),
+    .memData(memAddress),
+    .wbData(wbRegWriteData),
     .immediate(exImmediate),
     .regData(exRegReadData2),
     .forwardMem(forwardMem2),

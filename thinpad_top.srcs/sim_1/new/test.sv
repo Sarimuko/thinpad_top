@@ -20,6 +20,7 @@ wire[7:0] OutMem4;
 wire[7:0] OutMem5;
 wire[7:0] OutMem6;
 wire[7:0] OutMem7;
+wire[4:0] OutForward;
 wire [31:0] outPC;
 wire [31:0] outInstruction;
 wire RegDst;
@@ -85,7 +86,8 @@ thinpad_top dut(
     .OutALUOp(ALUOp),
     .debugOut1(debugOut1),
     .debugOut2(debugOut2),
-    .debugOut3(debugOut3)
+    .debugOut3(debugOut3),
+    .OutForward(OutForward)
 );
 /*
 clock osc(

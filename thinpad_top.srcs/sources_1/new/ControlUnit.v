@@ -27,7 +27,7 @@ module ControlUnit(
     wire [5:0] Func;
     assign Func = Instruction[5:0];
 
-    always@(OP) 
+    always@(*) 
     begin
         case(OP)
             `R_TYPE:
@@ -114,7 +114,7 @@ module ControlUnit(
                 ExtOp = 0;
                 ALUOp = 3'b101;
             end
-            6'b000010:
+            /*6'b000010:
             // jump
             begin
                 RegDst = 0;
@@ -127,11 +127,12 @@ module ControlUnit(
                 Jump = 1;
                 ExtOp = 0;
                 ALUOp = 3'b000;
-            end
+            end*/
             default:
             begin
                 RegDst = 0;
-                //ALUSrc = 0;
+                ALUSrc1 = 0;
+                ALUSrc2 = 0;
                 MemtoReg = 0;
                 RegWrite = 0;
                 MemWrite = 0;

@@ -27,7 +27,7 @@ module MUX_ALU
         end
         else if(forwardWb)
         begin
-            S = forwardWb;
+            S = wbData;
         end
         else // no forward
         begin

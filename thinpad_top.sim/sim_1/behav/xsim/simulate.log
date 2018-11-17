@@ -24,5 +24,3 @@ xxxxxxxx
 xxxxxxxx
 xxxxxxxx
 xxxxxxxx
-FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
-Time: 130 ns  Iteration: 10000
