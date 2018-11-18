@@ -5,7 +5,7 @@ module Register(
     input [4:0] ReadReg1,
     input [4:0] ReadReg2,
     input [4:0] WriteReg,
-    input RegWe,
+    input RegWe, // write signal for register
     input [31:0] WriteData,
     output [31:0] ReadData1,
     output [31:0] ReadData2,
@@ -28,6 +28,8 @@ module Register(
     // RS : address of rs
     // RT : address of rt
     // RS -> ReadData1  RT -> ReadData2 
+
+    // it can be assigned dynamically??
     assign ReadData1 = register[ReadReg1];
     assign ReadData2 = register[ReadReg2];
     assign Reg0 = register[0][7:0];

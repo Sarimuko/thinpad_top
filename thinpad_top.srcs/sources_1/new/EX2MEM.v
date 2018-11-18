@@ -18,6 +18,8 @@ module EX2MEM(
 
     /*input JumpTarget,
     output reg JumpTargetOut,*/
+    input [3:0] ByteLength,
+    output reg [3:0] ByteLengthOut,
 
     input [31:0] RegReadData2,
     output reg [31:0] RegReadData2Out,
@@ -38,6 +40,7 @@ module EX2MEM(
         MemWriteOut <= MemWrite;
         MemtoRegOut <= MemtoReg;
         RegWriteOut <= RegWrite;
+        ByteLengthOut <= ByteLength;
         //JumpTargetOut <= JumpTarget;
         RegReadData2Out <= RegReadData2;
         ZeroOut <= Zero;

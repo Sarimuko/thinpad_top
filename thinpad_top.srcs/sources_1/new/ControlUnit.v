@@ -6,6 +6,9 @@
 `define ORI     6'b001101
 `define XORI    6'b001110
 `define CLZ_R_TYPE     6'b011100
+`define LW      6'b100011
+`define LH      6'b100001
+`define LB      6'b100000
 
 module ControlUnit(
     input wire [31:0] Instruction,
@@ -19,7 +22,9 @@ module ControlUnit(
     output reg Branch,
     output reg Jump,
     output reg ExtOp,
-    output reg [2:0] ALUOp
+    output reg [2:0] ALUOp,
+
+    output reg [3:0] ByteLength
     );
 
     wire [5:0] OP;
@@ -30,6 +35,33 @@ module ControlUnit(
     always@(*) 
     begin
         case(OP)
+            `LW:
+            begin
+                RegDst = 0;
+                MemWrite = 0;
+                MemRead = 1;
+                MemtoReg = 1;
+                RegWrite = 1;
+                ByteLength = 4'b0000;
+            end
+            `LH:
+            begin
+                RegDst = 0;
+                MemWrite = 0;
+                MemRead = 1;
+                MemtoReg = 1;
+                RegWrite = 1;
+                ByteLength = 4'b0011;
+            end
+            `LB:
+            begin
+                RegDst = 0;
+                MemWrite = 0;
+                MemRead = 1;
+                MemtoReg = 1;
+                RegWrite = 1;
+                ByteLength = 4'b0111;
+            end
             `R_TYPE:
             begin
                 RegDst = 1;

@@ -42,6 +42,9 @@ module ID2EX(
     input [31:0] Immediate,
     output reg [31:0] ImmediateOut,
 
+    input [3:0] Bytelength,
+    output reg [3:0] BytelengthOut,
+
     input [4:0] Reg1,
     output reg [4:0] Reg1Out,
 
@@ -68,6 +71,7 @@ module ID2EX(
         RegReadData1Out <= RegReadData1;
         RegReadData2Out <= RegReadData2;
         ImmediateOut <= Immediate;
+        BytelengthOut <= Bytelength;
         Reg1Out <= Reg1;
         Reg2Out <= Reg2;
         Reg3Out <= Reg3;
